@@ -1,0 +1,97 @@
+/* Custom styling for projects sub-page buttons */
+
+.work .button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin: 3rem auto;
+  width: 100%;
+  max-width: 600px;
+  justify-content: center;
+  align-items: center;
+}
+
+.work .button-group .btn {
+  outline: none;
+  padding: 1rem 2.5rem;
+  background: transparent;
+  color: var(--text-color);
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1.4rem;
+  transition: all 0.3s ease;
+  font-family: "Poppins", sans-serif;
+}
+
+.work .button-group .btn:hover {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.work .button-group .btn.is-checked {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: #fff;
+  box-shadow: 0 4px 12px var(--primary-glow);
+}
+
+/* Grid layout specifics for isotope */
+.box-container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.grid-item {
+  width: 33.333%;
+  padding: 1.2rem;
+}
+
+@media (max-width: 991px) {
+  .grid-item {
+    width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-item {
+    width: 100%;
+  }
+}
+
+.backbtn {
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+}
+
+.backbtn .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem 3.5rem;
+  border-radius: 8px;
+  color: var(--text-color);
+  border: 2px solid var(--border-color);
+  font-weight: 700;
+  font-size: 1.6rem;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+.backbtn .btn:hover {
+  background: var(--primary-color);
+  color: #fff;
+  border-color: var(--primary-color);
+}
+
+.backbtn .btn i {
+  transition: transform 0.3s;
+}
+
+.backbtn .btn:hover i {
+  transform: translateX(-5px);
+}

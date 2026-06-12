@@ -1,0 +1,68 @@
+[
+  {
+    "name": "CodeX Live",
+    "desc": "AI-powered collaborative coding platform designed for developers and teams. Provides real-time collaboration, AI-assisted code reviews, project discussions, and productivity tools. Flagship/Final Year Project.",
+    "image": "codex_live",
+    "category": "mern",
+    "featured": true,
+    "links": {
+      "view": "https://portfolioriteshmaurya.vercel.app",
+      "code": "https://github.com/Riteshmaurya07"
+    }
+  },
+  {
+    "name": "CipherSQL Studio",
+    "desc": "Secure database management platform enabling users to execute queries, manage databases, monitor activity, and interact with data through a modern dashboard.",
+    "image": "ciphersql",
+    "category": "mern",
+    "featured": true,
+    "links": {
+      "view": "https://cipher-sql-studio-seven.vercel.app/",
+      "code": "https://github.com/Riteshmaurya07/CipherSQLStudio"
+    }
+  },
+  {
+    "name": "DocChat",
+    "desc": "AI-powered document assistant allowing users to upload PDFs, generate summaries, ask questions, and maintain conversation history. Built with Gemini API.",
+    "image": "docchat",
+    "category": "mern",
+    "featured": true,
+    "links": {
+      "view": "https://doc-chat-blue.vercel.app/",
+      "code": "https://github.com/Riteshmaurya07/DocChat"
+    }
+  },
+  {
+    "name": "Matty",
+    "desc": "Browser-based interactive design and whiteboarding tool with canvas editor, cloud storage, templates, and JWT auth. Built using React, Vite, Tailwind, and Excalidraw.",
+    "image": "matty",
+    "category": "mern",
+    "featured": true,
+    "links": {
+      "view": "https://matty-graphic-design-tool.vercel.app/",
+      "code": "https://github.com/Riteshmaurya07/Matty_Graphic_design_tool"
+    }
+  },
+  {
+    "name": "AI Waste Classifier",
+    "desc": "AI-powered waste classification system using deep learning (TensorFlow, MobileNetV2) to identify and classify waste into Cardboard, Glass, Metal, Paper, Plastic, and Trash.",
+    "image": "garbage_classification",
+    "category": "basicweb",
+    "featured": false,
+    "links": {
+      "view": "#",
+      "code": "https://github.com/Riteshmaurya07"
+    }
+  },
+  {
+    "name": "Weather Forecast",
+    "desc": "Real-time weather forecasting application providing updates via OpenWeather API, featuring a clean responsive dashboard built using React and Tailwind.",
+    "image": "weatherapp",
+    "category": "basicweb",
+    "featured": false,
+    "links": {
+      "view": "https://weather-app-nu-orpin-25.vercel.app/",
+      "code": "https://github.com/Riteshmaurya07/Weather-App"
+    }
+  }
+]

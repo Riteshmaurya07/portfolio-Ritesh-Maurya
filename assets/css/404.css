@@ -1,0 +1,80 @@
+/* Overrides for 404 page */
+
+.page_404 { 
+    padding: 60px 0; 
+    background: var(--card-bg);
+    margin-top: 6.5rem;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper {
+  background-image: url(https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif);
+  height: 400px;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+
+.wrapper h1 {
+  font-size: 8rem;
+  text-align: center;
+  color: var(--text-color);
+}
+
+.msg {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.msg h3 {
+    font-size: 3.6rem;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+.msg p {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--text-light);
+}
+
+.backbtn {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.backbtn .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem 3.5rem;
+  border-radius: 8px;
+  color: var(--text-color);
+  border: 2px solid var(--border-color);
+  font-weight: 700;
+  font-size: 1.6rem;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+.backbtn .btn:hover {
+  background: var(--primary-color);
+  color: #fff;
+  border-color: var(--primary-color);
+}
+
+.backbtn .btn i {
+  transition: transform 0.3s;
+}
+
+.backbtn .btn:hover i {
+  transform: translateX(-5px);
+}
