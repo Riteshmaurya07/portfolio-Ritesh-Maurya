@@ -49,7 +49,7 @@
     },
     {
         "name": "TailwindCSS",
-        "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/48px-Tailwind_CSS_Logo.png"
+        "icon": "https://img.icons8.com/color/48/000000/tailwindcss.png"
     },
     {
         "name": "Bootstrap",
@@ -98,6 +98,22 @@
     {
         "name": "System Design",
         "icon": "https://img.icons8.com/fluency/48/system-task.png"
+    },
+    {
+        "name": "Socket.io",
+        "icon": "https://cdn.simpleicons.org/socketdotio"
+    },
+    {
+        "name": "Gemini API / AI",
+        "icon": "https://cdn.simpleicons.org/googlegemini"
+    },
+    {
+        "name": "Cloudinary",
+        "icon": "https://cdn.simpleicons.org/cloudinary"
+    },
+    {
+        "name": "GitHub Actions (CI/CD)",
+        "icon": "https://cdn.simpleicons.org/githubactions"
     },
     {
         "name": "Problem Solving (DSA)",
