@@ -75,15 +75,21 @@ $(document).ready(function () {
         const streakImg = document.getElementById('github-streak');
         const topLangsImg = document.getElementById('github-top-langs');
         const graphImg = document.getElementById('github-graph');
+        const codolioImg = document.getElementById('codolio-stats');
+        const leetcodeImg = document.getElementById('leetcode-stats');
 
         const isDark = theme === 'dark';
         const cardTheme = isDark ? 'radial' : 'buefy';
         const graphTheme = isDark ? 'react-dark' : 'react-light';
+        const codolioTheme = isDark ? 'dark' : 'light';
+        const leetcodeTheme = isDark ? 'dark' : 'light';
 
         if (statsImg) statsImg.src = `https://github-readme-stats.vercel.app/api?username=Riteshmaurya07&show_icons=true&theme=${cardTheme}`;
         if (streakImg) streakImg.src = `https://streak-stats.demolab.com/?user=Riteshmaurya07&theme=${cardTheme}`;
         if (topLangsImg) topLangsImg.src = `https://github-readme-stats.vercel.app/api/top-langs/?username=Riteshmaurya07&layout=compact&theme=${cardTheme}`;
         if (graphImg) graphImg.src = `https://github-readme-activity-graph.vercel.app/graph?username=Riteshmaurya07&theme=${graphTheme}`;
+        if (codolioImg) codolioImg.src = `https://dsastats.vercel.app/api/codolio/riteshmaurya07?theme=${codolioTheme}`;
+        if (leetcodeImg) leetcodeImg.src = `https://leetcard.jacoblin.cool/riteshmaurya07?theme=${leetcodeTheme}&extension=heatmap`;
     }
 
     // Set up errors fallback for stats images to handle rate-limiting

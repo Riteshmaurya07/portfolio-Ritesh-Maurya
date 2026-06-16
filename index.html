@@ -20,6 +20,8 @@
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./projects/style.css">
+  <link rel="stylesheet" href="./experience/style.css">
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
@@ -38,9 +40,6 @@
     <a href="/" class="logo"><i class="far fa-registered"></i> Ritesh</a>
 
     <div class="header-actions">
-      <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Theme">
-        <i class="fas fa-moon"></i>
-      </button>
       <div id="menu" class="fas fa-bars"></div>
     </div>
 
@@ -52,8 +51,13 @@
         <li><a href="#education">Education</a></li>
         <li><a href="#work">Projects</a></li>
         <li><a href="#experience">Experience</a></li>
-        <li><a href="#github-activity">GitHub</a></li>
+        <li><a href="#github-activity">GitHub & Coding</a></li>
         <li><a href="#contact">Contact</a></li>
+        <li>
+          <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Theme">
+            <i class="fas fa-moon"></i>
+          </button>
+        </li>
       </ul>
     </nav>
   </header>
@@ -260,6 +264,41 @@
   </section>
   <!-- experience section ends -->
 
+  <!-- github section starts -->
+  <section class="github-activity" id="github-activity">
+    <h2 class="heading"><i class="fab fa-github"></i> GitHub & Coding <span>Activity</span></h2>
+
+    <div class="github-grid">
+      <div class="github-stats-container">
+        <div class="github-card-wrapper">
+          <img id="github-stats" draggable="false" src="" alt="Ritesh Maurya's GitHub Stats">
+        </div>
+        <div class="github-card-wrapper">
+          <img id="github-streak" draggable="false" src="" alt="Ritesh Maurya's GitHub Streak">
+        </div>
+        <div class="github-card-wrapper">
+          <img id="github-top-langs" draggable="false" src="" alt="Ritesh Maurya's Top Languages">
+        </div>
+        <div class="github-card-wrapper">
+          <a href="https://codolio.com/profile/riteshmaurya07" target="_blank" style="display: contents;">
+            <img id="codolio-stats" draggable="false" src="" alt="Ritesh Maurya's Codolio Stats">
+          </a>
+        </div>
+      </div>
+      <div class="github-graph-wrapper">
+        <h3><i class="fas fa-chart-line"></i> Contribution Graph</h3>
+        <img id="github-graph" draggable="false" src="" alt="Ritesh Maurya's Contribution Graph">
+      </div>
+      <div class="github-graph-wrapper">
+        <h3><i class="fas fa-code"></i> LeetCode Stats & Heatmap</h3>
+        <a href="https://leetcode.com/riteshmaurya07" target="_blank" style="display: contents;">
+          <img id="leetcode-stats" draggable="false" src="" alt="Ritesh Maurya's LeetCode Stats & Heatmap">
+        </a>
+      </div>
+    </div>
+  </section>
+  <!-- github section ends -->
+
   <!-- contact section starts -->
   <section class="contact" id="contact">
     <h2 class="heading"><i class="fas fa-headset"></i> Get in <span>Touch</span></h2>
@@ -318,6 +357,7 @@
         <a href="#education"><i class="fas fa-chevron-circle-right"></i> education</a>
         <a href="#work"><i class="fas fa-chevron-circle-right"></i> projects</a>
         <a href="#experience"><i class="fas fa-chevron-circle-right"></i> experience</a>
+        <a href="#github-activity"><i class="fas fa-chevron-circle-right"></i> github</a>
       </div>
 
       <div class="box">
