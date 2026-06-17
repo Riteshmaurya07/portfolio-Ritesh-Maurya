@@ -2,7 +2,7 @@
 
 Welcome to my personal portfolio repository! This is a modern, responsive, and performance-optimized portfolio website showcasing my skills, education, projects, achievements, and professional experience.
 
-🌐 **Live Link:** [Visit My Portfolio](https://portfolioriteshmaurya.vercel.app)
+🌐 **Live Link:** [Visit My Portfolio](https://portfolio-ritesh-maurya.vercel.app/)
 
 ---
 
