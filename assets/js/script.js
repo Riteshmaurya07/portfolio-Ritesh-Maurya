@@ -225,7 +225,11 @@ fetchData().then(data => {
 });
 
 fetchData("projects").then(data => {
-    showProjects(data);
+    // Show only top 6 projects on the home page, sorting featured ones first
+    const homeProjects = data
+        .sort((a, b) => (b.featured ? 1 : 0) - (a.featured ? 1 : 0))
+        .slice(0, 6);
+    showProjects(homeProjects);
 });
 
 // Scroll Reveal configurations

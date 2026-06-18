@@ -6,7 +6,7 @@
     "category": "mern",
     "featured": true,
     "links": {
-      "view": "https://portfolioriteshmaurya.vercel.app",
+      "view": "https://codexlive-three.vercel.app/",
       "code": "https://github.com/Riteshmaurya07"
     }
   },
@@ -50,7 +50,7 @@
     "category": "basicweb",
     "featured": false,
     "links": {
-      "view": "#",
+      "view": "https://github.com/Riteshmaurya07",
       "code": "https://github.com/Riteshmaurya07"
     }
   },
@@ -63,6 +63,94 @@
     "links": {
       "view": "https://weather-app-nu-orpin-25.vercel.app/",
       "code": "https://github.com/Riteshmaurya07/Weather-App"
+    }
+  },
+  {
+    "name": "Wanderlust",
+    "desc": "A travel listing and booking application simulating Airbnb, with full CRUD, user authentication, review systems, and map integrations. Built using Node, Express, MongoDB, and EJS.",
+    "image": "wanderlust",
+    "category": "mern",
+    "featured": true,
+    "links": {
+      "view": "https://wanderlust-3f61.onrender.com/",
+      "code": "https://github.com/Riteshmaurya07/wanderlust"
+    }
+  },
+  {
+    "name": "LaceUp",
+    "desc": "A modern, highly responsive e-commerce web landing page for a premium shoe retailer. Crafted with sleek transitions, hover effects, and aesthetic layouts.",
+    "image": "laceup",
+    "category": "basicweb",
+    "featured": false,
+    "links": {
+      "view": "https://laceup-nv42.vercel.app/",
+      "code": "https://github.com/Riteshmaurya07/laceup"
+    }
+  },
+  {
+    "name": "Simon Says Game",
+    "desc": "An interactive browser game implementing the classic Simon Says logic. Features dynamic flash sequences, score tracking, responsive sounds, and clean animations.",
+    "image": "simon_says",
+    "category": "basicweb",
+    "featured": false,
+    "links": {
+      "view": "https://simon-says-two-alpha.vercel.app/",
+      "code": "https://github.com/Riteshmaurya07/simonSays"
+    }
+  },
+  {
+    "name": "Spotify UI Clone",
+    "desc": "A pixel-perfect UI clone of the Spotify web player. Features fully responsive sidebars, custom media controller elements, and clean grid layouts for playlists.",
+    "image": "spotify_clone",
+    "category": "basicweb",
+    "featured": false,
+    "links": {
+      "view": "https://spotify-clone-mauve-chi.vercel.app/",
+      "code": "https://github.com/Riteshmaurya07/spotifyClone"
+    }
+  },
+  {
+    "name": "Lottery Ticket Simulator",
+    "desc": "A web-based simulator for lottery ticket generation. Implements dynamic algorithms to match generated numbers with winning tickets, complete with alerts.",
+    "image": "lottery_ticket",
+    "category": "basicweb",
+    "featured": false,
+    "links": {
+      "view": "https://lottery-ticket.vercel.app/",
+      "code": "https://github.com/Riteshmaurya07/LotteryTicket"
+    }
+  },
+  {
+    "name": "Blogging Platform API",
+    "desc": "A secure RESTful API built for a blogging website, featuring JWT authentication, post creation/modification, user profiles, and commenting system.",
+    "image": "blog_api",
+    "category": "mern",
+    "featured": false,
+    "links": {
+      "view": "https://github.com/Riteshmaurya07/blog_api",
+      "code": "https://github.com/Riteshmaurya07/blog_api"
+    }
+  },
+  {
+    "name": "Task Todo App",
+    "desc": "A clean productivity tool for listing, organizing, and completing tasks. Designed with persistent local storage, custom categorization, and state filters.",
+    "image": "todo_app",
+    "category": "basicweb",
+    "featured": false,
+    "links": {
+      "view": "https://github.com/Riteshmaurya07/todoApp",
+      "code": "https://github.com/Riteshmaurya07/todoApp"
+    }
+  },
+  {
+    "name": "Omega Orion landing",
+    "desc": "A premium tech-themed sci-fi landing page with custom CSS layouts, high-performance interactions, and modern web design aesthetics.",
+    "image": "omegaorion",
+    "category": "basicweb",
+    "featured": false,
+    "links": {
+      "view": "https://omegaorion.vercel.app/",
+      "code": "https://github.com/Riteshmaurya07/omegaorion"
     }
   }
 ]
