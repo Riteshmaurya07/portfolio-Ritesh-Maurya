@@ -10,22 +10,22 @@
 .experience .timeline {
   position: relative;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 .experience .timeline::after {
   content: "";
   position: absolute;
-  width: 6px;
-  background: #020133;
+  width: 4px;
+  background: var(--experience-line);
   top: 0;
   bottom: 0;
   left: 50%;
-  margin-left: -3px;
+  margin-left: -2px;
   z-index: 1;
 }
 .experience .container {
-  padding: 10px 30px;
+  padding: 15px 40px;
   position: relative;
   background-color: inherit;
   width: 50%;
@@ -33,22 +33,23 @@
 .experience .container::after {
   content: "\f0b1";
   position: absolute;
-  width: 25px;
-  height: 25px;
-  right: -17px;
-  background-color: rgb(255, 255, 255);
-  border: 4px solid #ff9f55;
-  top: 15px;
+  width: 36px;
+  height: 36px;
+  right: -18px;
+  background-color: var(--experience-circle-bg);
+  border: 3px solid var(--experience-circle-border);
+  top: 18px;
   border-radius: 50%;
   z-index: 100;
-  font-size: 1.89rem;
+  font-size: 1.4rem;
   text-align: center;
   font-weight: 600;
-  color: #02094b;
+  color: var(--primary-color);
   font-family: "Font Awesome\ 5 Free";
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0 4px 10px var(--shadow-light);
 }
 .experience .left {
   left: 0;
@@ -60,64 +61,92 @@
   content: " ";
   height: 0;
   position: absolute;
-  top: 22px;
+  top: 26px;
   width: 0;
   z-index: 1;
-  right: 20px;
-  border: medium solid #f68c09;
+  right: 30px;
+  border: medium solid var(--border-color);
   border-width: 10px 0 10px 10px;
-  border-color: transparent transparent transparent #f68c09;
+  border-color: transparent transparent transparent var(--border-color);
 }
 .experience .right::before {
   content: " ";
   height: 0;
   position: absolute;
-  top: 22px;
+  top: 26px;
   width: 0;
   z-index: 1;
-  left: 20px;
-  border: medium solid #f68c09;
+  left: 30px;
+  border: medium solid var(--border-color);
   border-width: 10px 10px 10px 0;
-  border-color: transparent #f68c09 transparent transparent;
+  border-color: transparent var(--border-color) transparent transparent;
 }
 .experience .right::after {
-  left: -16px;
+  left: -18px;
 }
 .experience .content {
-  background-color: #f68c09;
+  background-color: var(--experience-card-bg);
+  border: 1px solid var(--border-color);
   position: relative;
-  border-radius: 6px;
-  color: #fff;
-  padding: 0;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  border-radius: 12px;
+  color: var(--text-color);
+  padding: 2.5rem;
+  box-shadow: 0 8px 24px var(--shadow-light);
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+.experience .content:hover {
+  border-color: var(--primary-color);
+  box-shadow: 0 12px 30px var(--primary-glow);
 }
 .experience .content .tag {
   font-size: 1.3rem;
-  padding-top: 1.5rem;
-  padding-left: 1.5rem;
+  padding: 0;
   background: none;
-  color: #fff;
+  color: var(--primary-color);
   height: auto;
   min-height: auto;
   width: auto;
 }
 .experience .content .tag h2 {
-  font-size: 2rem;
-  font-weight: 600;
-  color: #fff;
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
 }
 .experience .content .desc {
-  margin-left: 1.5rem;
-  padding-bottom: 1rem;
+  margin-left: 0;
+  padding-bottom: 0;
 }
 .experience .content .desc h3 {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--heading-color);
+  margin-bottom: 0.5rem;
 }
 .experience .content .desc p {
-  font-size: 1.2rem;
-  color: #fff;
+  font-size: 1.3rem;
+  color: var(--text-light);
+  font-weight: 500;
+}
+.experience .content .desc ul {
+  margin-top: 1.5rem;
+  list-style: none;
+  padding-left: 0;
+}
+.experience .content .desc ul li {
+  font-size: 1.35rem;
+  line-height: 1.6;
+  color: var(--text-light);
+  margin-bottom: 1rem;
+  position: relative;
+  padding-left: 2rem;
+}
+.experience .content .desc ul li::before {
+  content: "⚡";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--primary-color);
 }
 .morebtn {
   display: flex;

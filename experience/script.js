@@ -1,5 +1,18 @@
 $(document).ready(function () {
 
+    // Dynamic Scroll Progress Bar
+    const progBar = document.createElement("div");
+    progBar.id = "scroll-progress";
+    progBar.className = "scroll-progress-bar";
+    document.body.prepend(progBar);
+
+    window.addEventListener("scroll", () => {
+        const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = (winScroll / height) * 100;
+        progBar.style.width = scrolled + "%";
+    });
+
     // Navbar toggler
     $('#menu').click(function () {
         $(this).toggleClass('fa-times');
@@ -19,7 +32,12 @@ $(document).ready(function () {
 
     // Theme Toggle Functionality
     const themeToggleBtn = document.getElementById('theme-toggle');
-    const currentTheme = localStorage.getItem('theme') || 'light';
+    let currentTheme = localStorage.getItem('theme');
+    
+    if (!currentTheme) {
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        currentTheme = prefersDark ? 'dark' : 'light';
+    }
 
     // Apply saved theme on load
     if (currentTheme === 'dark') {
@@ -70,3 +88,36 @@ document.addEventListener('visibilitychange',
             $("#favicon").attr("href", "../assets/images/favhand.png");
         }
     });
+
+// Fetch and render experience timeline dynamically
+fetch("../data/experience.json")
+    .then(response => response.json())
+    .then(data => {
+        showExperience(data);
+    });
+
+function showExperience(experience) {
+    const container = document.getElementById("experienceContainer");
+    if (!container) return;
+    let html = "";
+    experience.forEach((exp, idx) => {
+        const sideClass = idx % 2 === 0 ? "right" : "left";
+        const bulletsHTML = exp.bullets.map(b => `<li>${b}</li>`).join('');
+        html += `
+        <div class="container ${sideClass}">
+          <div class="content">
+            <div class="tag">
+              <h2>${exp.company}</h2>
+            </div>
+            <div class="desc">
+              <h3>${exp.role}</h3>
+              <p>${exp.duration}</p>
+              <ul>
+                ${bulletsHTML}
+              </ul>
+            </div>
+          </div>
+        </div>`;
+    });
+    container.innerHTML = html;
+}

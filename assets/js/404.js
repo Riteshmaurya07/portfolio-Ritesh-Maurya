@@ -1,5 +1,18 @@
 $(document).ready(function () {
 
+    // Dynamic Scroll Progress Bar
+    const progBar = document.createElement("div");
+    progBar.id = "scroll-progress";
+    progBar.className = "scroll-progress-bar";
+    document.body.prepend(progBar);
+
+    window.addEventListener("scroll", () => {
+        const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = (winScroll / height) * 100;
+        progBar.style.width = scrolled + "%";
+    });
+
     $('#menu').click(function () {
         $(this).toggleClass('fa-times');
         $('.navbar').toggleClass('nav-toggle');
@@ -7,7 +20,12 @@ $(document).ready(function () {
 
     // Theme Toggle Functionality
     const themeToggleBtn = document.getElementById('theme-toggle');
-    const currentTheme = localStorage.getItem('theme') || 'light';
+    let currentTheme = localStorage.getItem('theme');
+    
+    if (!currentTheme) {
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        currentTheme = prefersDark ? 'dark' : 'light';
+    }
 
     // Apply saved theme on load
     if (currentTheme === 'dark') {

@@ -5,18 +5,27 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#030712" />
   <meta name="keywords"
     content="ritesh maurya, ritesh, portfolio, mern stack dev, full stack developer, software engineer, web developer, kanpur" />
   <meta name="description"
-    content="Welcome to the personal portfolio of Ritesh Maurya, a passionate MERN Stack Developer and Software Engineer." />
+    content="Welcome to the personal portfolio of Ritesh Maurya, a passionate Full Stack Developer and Software Engineer." />
+  
+  <link rel="canonical" href="https://portfolio-ritesh-maurya.vercel.app/" />
 
   <!-- OpenGraph Metadata -->
   <meta property="og:title" content="Portfolio | Ritesh Maurya" />
   <meta property="og:description"
-    content="Explore projects, skills, and experience of Ritesh Maurya, a MERN Stack Developer based in Kanpur, India." />
+    content="Explore selected projects, dynamic coding metrics, and experience of Ritesh Maurya, a Full Stack Developer." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://portfolioriteshmaurya.vercel.app" />
+  <meta property="og:url" content="https://portfolio-ritesh-maurya.vercel.app" />
   <meta property="og:image" content="./assets/images/favicon.png" />
+
+  <!-- Twitter Card Metadata -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Portfolio | Ritesh Maurya" />
+  <meta name="twitter:description" content="Explore selected projects, dynamic coding metrics, and experience of Ritesh Maurya, a Full Stack Developer." />
+  <meta name="twitter:image" content="https://portfolio-ritesh-maurya.vercel.app/assets/images/favicon.png" />
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="./assets/css/style.css">
@@ -31,6 +40,26 @@
   <!-- Favicon -->
   <link id="favicon" rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-png">
   <title>Portfolio | Ritesh Maurya</title>
+
+  <!-- Schema.org JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Ritesh Maurya",
+    "jobTitle": "Software Engineer & MERN Stack Developer",
+    "url": "https://portfolio-ritesh-maurya.vercel.app/",
+    "sameAs": [
+      "https://github.com/Riteshmaurya07",
+      "https://linkedin.com/in/riteshmaurya07",
+      "https://leetcode.com/riteshmaurya07"
+    ],
+    "alumniOf": {
+      "@type": "EducationalOrganization",
+      "name": "University Institute of Engineering and Technology, Kanpur"
+    }
+  }
+  </script>
 </head>
 
 <body>
@@ -48,10 +77,8 @@
         <li><a class="active" href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#work">Projects</a></li>
         <li><a href="#experience">Experience</a></li>
-        <li><a href="#github-activity">GitHub & Coding</a></li>
+        <li><a href="#work">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
         <li>
           <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Theme">
@@ -68,11 +95,24 @@
     <div id="particles-js"></div>
 
     <div class="content">
-      <h2>Hi There,<br /> I'm Ritesh <span>Maurya</span></h2>
-      <p>I am into <span class="typing-text"></span></p>
-      <a href="#about" class="btn"><span>About Me</span>
-        <i class="fas fa-arrow-circle-down"></i>
-      </a>
+      <div class="opportunities-badge">
+        <span class="pulse-dot"></span>
+        Available for Full-Time Opportunities
+      </div>
+      <h1>Hi There,<br /> I'm Ritesh <span>Maurya</span></h1>
+      <p class="hero-role">Software Engineer &amp; MERN Stack Developer</p>
+      <p class="hero-typing">Focused on building <span class="typing-text"></span></p>
+      
+      <div class="hero-btns" style="display: flex; gap: 1.5rem; margin-top: 2.5rem; flex-wrap: wrap;">
+        <a href="https://drive.google.com/file/d/1cdpvGrLe-in-xqpSkXvvt6jGzLjI_SSc/view?usp=sharing" target="_blank" class="btn">
+          <span>View Resume</span>
+          <i class="fas fa-file-pdf"></i>
+        </a>
+        <a href="#work" class="btn secondary-btn">
+          <span>View Projects</span>
+          <i class="fas fa-code"></i>
+        </a>
+      </div>
 
       <div class="socials">
         <ul class="social-icons">
@@ -102,23 +142,58 @@
     <h2 class="heading"><i class="fas fa-user-alt"></i> About <span>Me</span></h2>
 
     <div class="row">
-      <div class="image">
-        <img draggable="false" class="tilt" src="./assets/images/hero1.png" alt="About Ritesh">
+      <div class="about-stats-panel">
+        <div class="stat-item">
+          <div class="stat-icon">
+            <i class="fas fa-brain"></i>
+          </div>
+          <div class="stat-info">
+            <h4>800+ Solved</h4>
+            <p>Data Structures & Algorithms</p>
+          </div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-icon">
+            <i class="fas fa-star"></i>
+          </div>
+          <div class="stat-info">
+            <h4>2★ Rating</h4>
+            <p>CodeChef coding profile</p>
+          </div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-icon">
+            <i class="fas fa-graduation-cap"></i>
+          </div>
+          <div class="stat-info">
+            <h4>8.53 CGPA</h4>
+            <p>B.Tech Computer Science</p>
+          </div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-icon">
+            <i class="fas fa-laptop-code"></i>
+          </div>
+          <div class="stat-info">
+            <h4>GNCIPL Intern</h4>
+            <p>Software Developer Internship</p>
+          </div>
+        </div>
       </div>
 
       <div class="content">
         <h3>I'm Ritesh</h3>
-        <span class="tag">MERN Stack Developer & Software Engineer</span>
+        <span class="tag">Full Stack Developer | Software Engineer</span>
 
-        <p>I am a passionate MERN Stack developer based in Kanpur, India. I am pursuing my B.Tech from the University
-          Institute of Engineering and Technology, Kanpur (CSJM University). I love building robust, scalable web
-          applications and exploring state-of-the-art technologies, with special interest in AI-powered tools and SaaS
-          architectures.</p>
+        <p>I am a results-driven Software Engineer and Full Stack Developer specializing in the MERN stack and AI integration. With a strong foundation in computer science and competitive programming, I have solved over 800+ DSA problems, developing advanced problem-solving capabilities. During my internship at GNCIPL, I built scalable web applications, optimizing API latency and front-end performance. I am passionate about creating clean, maintainable code and integrating intelligent AI APIs to build high-performance tools that solve real-world problems.</p>
 
         <div class="box-container">
           <div class="box">
-            <p><span> Email : </span> riteshmauryarm3@gmail.com</p>
-            <p><span> Place : </span> Kanpur, India</p>
+            <p style="display: flex; align-items: center; gap: 0.8rem; flex-wrap: wrap; text-transform: none !important;">
+              <span> Email : </span> riteshmauryarm3@gmail.com
+              <button onclick="copyToClipboard('riteshmauryarm3@gmail.com', 'Email copied!')" aria-label="Copy Email" style="background: var(--secondary-bg); color: var(--primary-color); cursor: pointer; border: 1px solid var(--border-color); border-radius: 4px; padding: 0.3rem 0.6rem; font-size: 1.15rem; display: inline-flex; align-items: center; gap: 0.4rem; font-weight: 700; transition: all 0.2s;"><i class="fas fa-copy"></i> Copy</button>
+            </p>
+            <p><span> Place : </span> Kanpur, Uttar Pradesh, India</p>
           </div>
         </div>
         <!-- resume -->
@@ -136,29 +211,71 @@
     <h3 class="heading" style="margin-top: 6rem; font-size: 2.6rem; margin-bottom: 2rem;"><i class="fas fa-trophy"></i>
       Key <span>Achievements</span></h3>
     <div class="achievements-grid">
+      <!-- Card 1 -->
       <div class="achievement-card">
-        <i class="fas fa-laptop-code"></i>
-        <span>Software Development Intern at GNCIPL</span>
+        <div class="card-icon">
+          <i class="fas fa-code"></i>
+        </div>
+        <div class="card-content">
+          <div class="card-num">800+</div>
+          <div class="card-title">DSA Problems Solved</div>
+          <p class="card-desc">Solved across platforms LeetCode & CodeChef, building strong analytical skills.</p>
+        </div>
       </div>
+      <!-- Card 2 -->
       <div class="achievement-card">
-        <i class="fas fa-project-diagram"></i>
-        <span>Multiple Full Stack MERN Projects Deployed</span>
+        <div class="card-icon">
+          <i class="fas fa-graduation-cap"></i>
+        </div>
+        <div class="card-content">
+          <div class="card-num">8.53</div>
+          <div class="card-title">CGPA Academics</div>
+          <p class="card-desc">Maintained solid academic consistency throughout Computer Science studies.</p>
+        </div>
       </div>
+      <!-- Card 3 -->
       <div class="achievement-card">
-        <i class="fas fa-robot"></i>
-        <span>Experience with AI-powered Applications</span>
+        <div class="card-icon">
+          <i class="fas fa-project-diagram"></i>
+        </div>
+        <div class="card-content">
+          <div class="card-num">15+</div>
+          <div class="card-title">Full Stack Projects</div>
+          <p class="card-desc">Engineered interactive MERN applications, database tools, and utilities.</p>
+        </div>
       </div>
+      <!-- Card 4 -->
       <div class="achievement-card">
-        <i class="fas fa-cloud"></i>
-        <span>Experience Building SaaS Products</span>
+        <div class="card-icon">
+          <i class="fas fa-robot"></i>
+        </div>
+        <div class="card-content">
+          <div class="card-num">AI</div>
+          <div class="card-title">Powered Applications</div>
+          <p class="card-desc">Integrated Gemini API, AI tooling, and chat assistants in core builds.</p>
+        </div>
       </div>
+      <!-- Card 5 -->
       <div class="achievement-card">
-        <i class="fas fa-code-branch"></i>
-        <span>Open Source Contributor & GSoC Aspirant</span>
+        <div class="card-icon">
+          <i class="fas fa-briefcase"></i>
+        </div>
+        <div class="card-content">
+          <div class="card-num">Intern</div>
+          <div class="card-title">At GNCIPL</div>
+          <p class="card-desc">Gained practical training building and deploying MERN applications.</p>
+        </div>
       </div>
+      <!-- Card 6 -->
       <div class="achievement-card">
-        <i class="fas fa-award"></i>
-        <span>Flipkart Grid 6.0 Participant</span>
+        <div class="card-icon">
+          <i class="fas fa-users"></i>
+        </div>
+        <div class="card-content">
+          <div class="card-num">Enthusiast</div>
+          <div class="card-title">Open Source</div>
+          <p class="card-desc">Actively contributing to public codebases and competing in Flipkart Grid 6.0.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -182,28 +299,8 @@
     <h1 class="heading"><i class="fas fa-graduation-cap"></i> My <span>Education</span></h1>
     <p class="qoute">Education is not the learning of facts, but the training of the mind to think.</p>
 
-    <div class="box-container">
-      <div class="box">
-        <div class="image">
-          <img draggable="false" src="./assets/images/educat/college.jpg" alt="College">
-        </div>
-        <div class="content">
-          <h3>Bachelor of Technology</h3>
-          <p>University Institute of Engineering and Technology, Kanpur | CSJM University</p>
-          <h4>2022-2026 | Pursuing</h4>
-        </div>
-      </div>
-
-      <div class="box">
-        <div class="image">
-          <img draggable="false" src="./assets/images/educat/school.jpg" alt="School">
-        </div>
-        <div class="content">
-          <h3>HSC Science</h3>
-          <p>Nimisha Convent School | CBSE</p>
-          <h4>2019-2021 | Completed</h4>
-        </div>
-      </div>
+    <div class="box-container" id="educationContainer">
+      <!-- Rendered dynamically via JS -->
     </div>
   </section>
   <!-- education section ends -->
@@ -211,7 +308,7 @@
 
   <!-- work project section starts -->
   <section class="work" id="work">
-    <h2 class="heading"><i class="fas fa-laptop-code"></i> Projects <span>Made</span></h2>
+    <h2 class="heading"><i class="fas fa-laptop-code"></i> Featured Engineering <span>Projects</span></h2>
 
     <div class="box-container">
       <!-- Rendered dynamically via JS -->
@@ -230,30 +327,8 @@
   <section class="experience" id="experience">
     <h2 class="heading"><i class="fas fa-briefcase"></i> Professional <span>Experience</span></h2>
 
-    <div class="timeline">
-      <div class="container right">
-        <div class="content">
-          <div class="tag">
-            <h2>GNCIPL</h2>
-          </div>
-          <div class="desc">
-            <h3>Full Stack Developer Intern</h3>
-            <p>June 2025 - July 2025</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="container left">
-        <div class="content">
-          <div class="tag">
-            <h2>CodSoft</h2>
-          </div>
-          <div class="desc">
-            <h3>Web Developer | Training Internship</h3>
-            <p>June 2024 - July 2024</p>
-          </div>
-        </div>
-      </div>
+    <div class="timeline" id="experienceContainer">
+      <!-- Rendered dynamically via JS -->
     </div>
 
     <div class="morebtn">
@@ -264,67 +339,217 @@
   </section>
   <!-- experience section ends -->
 
-  <!-- github section starts -->
-  <section class="github-activity" id="github-activity">
-    <h2 class="heading"><i class="fab fa-github"></i> GitHub & Coding <span>Activity</span></h2>
+  <!-- engineering section starts -->
+  <section class="engineering" id="github-activity">
+    <h2 class="heading"><i class="fas fa-chart-bar"></i> Engineering <span>Dashboard</span></h2>
+    
+    <!-- Statistic Dashboard Cards Grid -->
+    <div class="metrics-grid">
+      <!-- Card 1 -->
+      <div class="metric-card">
+        <div class="metric-icon"><i class="fas fa-code"></i></div>
+        <div class="metric-number">800+</div>
+        <div class="metric-title">DSA Problems Solved</div>
+        <p class="metric-subtitle">LeetCode, CodeChef &amp; GeeksforGeeks</p>
+      </div>
+      <!-- Card 2 -->
+      <div class="metric-card">
+        <div class="metric-icon"><i class="fas fa-terminal"></i></div>
+        <div class="metric-number">2★</div>
+        <div class="metric-title">CodeChef Rating</div>
+        <p class="metric-subtitle">Peak Rating: 1481 Division Contestant</p>
+      </div>
+      <!-- Card 3 -->
+      <div class="metric-card">
+        <div class="metric-icon"><i class="fab fa-git-alt"></i></div>
+        <div class="metric-number" id="github-contrib-count">500+</div>
+        <div class="metric-title">GitHub Contributions</div>
+        <p class="metric-subtitle">Active commits, PRs &amp; submissions</p>
+      </div>
+      <!-- Card 4 -->
+      <div class="metric-card">
+        <div class="metric-icon"><i class="fas fa-archive"></i></div>
+        <div class="metric-number" id="github-repo-count">14+</div>
+        <div class="metric-title">Public Repositories</div>
+        <p class="metric-subtitle">Version-controlled open codebases</p>
+      </div>
+      <!-- Card 5 -->
+      <div class="metric-card">
+        <div class="metric-icon"><i class="fas fa-history"></i></div>
+        <div class="metric-number">2+</div>
+        <div class="metric-title">Years of Coding</div>
+        <p class="metric-subtitle">Rigorous programming experience</p>
+      </div>
+      <!-- Card 6 -->
+      <div class="metric-card">
+        <div class="metric-icon"><i class="fas fa-laptop-code"></i></div>
+        <div class="metric-number">15+</div>
+        <div class="metric-title">Full Stack Projects</div>
+        <p class="metric-subtitle">MERN, AI, &amp; Database solutions</p>
+      </div>
+      <!-- Card 7 -->
+      <div class="metric-card">
+        <div class="metric-icon"><i class="fas fa-briefcase"></i></div>
+        <div class="metric-number">2</div>
+        <div class="metric-title">Internships Completed</div>
+        <p class="metric-subtitle">GNCIPL (MERN) &amp; CodSoft (Web)</p>
+      </div>
+    </div>
 
-    <div class="github-grid">
-      <div class="github-stats-container">
-        <div class="github-card-wrapper">
-          <img id="github-stats" draggable="false" src="" alt="Ritesh Maurya's GitHub Stats">
+    <!-- Coding Profiles Section -->
+    <h3 class="subheading-title" style="margin-top: 6rem; font-size: 2.4rem; text-align: center; margin-bottom: 3rem; color: var(--heading-color); font-weight: 800;"><i class="fas fa-user-circle"></i> Coding <span>Profiles</span></h3>
+    <div class="profiles-grid">
+      <!-- LeetCode -->
+      <div class="profile-card">
+        <div class="profile-platform">
+          <img src="https://cdn.simpleicons.org/leetcode/orange" alt="LeetCode">
+          <h4>LeetCode</h4>
         </div>
-        <div class="github-card-wrapper">
-          <img id="github-streak" draggable="false" src="" alt="Ritesh Maurya's GitHub Streak">
+        <div class="profile-username">@riteshmaurya07</div>
+        <div class="profile-stat">800+ Solved | Arrays, Graphs, DP</div>
+        <a href="https://leetcode.com/riteshmaurya07" target="_blank" class="profile-link">Verify Profile <i class="fas fa-external-link-alt"></i></a>
+      </div>
+      <!-- CodeChef -->
+      <div class="profile-card">
+        <div class="profile-platform">
+          <img src="https://cdn.simpleicons.org/codechef/brown" alt="CodeChef">
+          <h4>CodeChef</h4>
         </div>
-        <div class="github-card-wrapper">
-          <img id="github-top-langs" draggable="false" src="" alt="Ritesh Maurya's Top Languages">
+        <div class="profile-username">@riteshmaurya07</div>
+        <div class="profile-stat">2★ Rating (1481 Peak) | Div 3 Contestant</div>
+        <a href="https://www.codechef.com/users/riteshmaurya07" target="_blank" class="profile-link">Verify Profile <i class="fas fa-external-link-alt"></i></a>
+      </div>
+      <!-- GeeksforGeeks -->
+      <div class="profile-card">
+        <div class="profile-platform">
+          <img src="https://cdn.simpleicons.org/geeksforgeeks/green" alt="GeeksforGeeks">
+          <h4>GeeksforGeeks</h4>
         </div>
-        <div class="github-card-wrapper">
-          <a href="https://codolio.com/profile/riteshmaurya07" target="_blank" style="display: contents;">
-            <img id="codolio-stats" draggable="false" src="" alt="Ritesh Maurya's Codolio Stats">
-          </a>
+        <div class="profile-username">@riteshmauryarm3</div>
+        <div class="profile-stat">Solved DSA challenges &amp; topics</div>
+        <a href="https://www.geeksforgeeks.org/user/riteshmauryarm3/" target="_blank" class="profile-link">Verify Profile <i class="fas fa-external-link-alt"></i></a>
+      </div>
+      <!-- Codolio -->
+      <div class="profile-card">
+        <div class="profile-platform">
+          <img src="https://img.icons8.com/color/48/000000/combo-chart.png" alt="Codolio" style="width: 24px; height: 24px;">
+          <h4>Codolio</h4>
+        </div>
+        <div class="profile-username">@riteshmaurya07</div>
+        <div class="profile-stat">Unified developer profile metrics</div>
+        <a href="https://codolio.com/profile/riteshmaurya07" target="_blank" class="profile-link">Verify Profile <i class="fas fa-external-link-alt"></i></a>
+      </div>
+      <!-- GitHub -->
+      <div class="profile-card">
+        <div class="profile-platform">
+          <img src="https://cdn.simpleicons.org/github/white" alt="GitHub" class="github-icon-white" style="filter: invert(1);">
+          <h4>GitHub</h4>
+        </div>
+        <div class="profile-username">@Riteshmaurya07</div>
+        <div class="profile-stat" id="github-follower-stat">14 Repos | 8 Followers</div>
+        <a href="https://github.com/Riteshmaurya07" target="_blank" class="profile-link">Verify Profile <i class="fas fa-external-link-alt"></i></a>
+      </div>
+    </div>
+
+    <!-- GitHub Telemetry & Activities -->
+    <h3 class="subheading-title" style="margin-top: 6rem; font-size: 2.4rem; text-align: center; margin-bottom: 3rem; color: var(--heading-color); font-weight: 800;"><i class="fab fa-github"></i> GitHub <span>Activity Telemetry</span></h3>
+    <div class="github-telemetry">
+      <div class="telemetry-left">
+        <div class="telemetry-info-card">
+          <h4>GitHub Profile Status</h4>
+          <div class="info-grid">
+            <div class="info-item">
+              <span class="info-label">Repositories:</span>
+              <span class="info-value" id="git-repos-val">14</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Followers:</span>
+              <span class="info-value" id="git-followers-val">8</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Following:</span>
+              <span class="info-value" id="git-following-val">15</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Direct Check:</span>
+              <a href="https://github.com/Riteshmaurya07" target="_blank" class="git-btn" style="margin-top: 0.5rem; text-align: center;">View GitHub <i class="fab fa-github"></i></a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="telemetry-info-card" style="margin-top: 2rem;">
+          <h4>Most Used Languages</h4>
+          <div class="languages-bar-container" id="git-langs-container">
+            <!-- Language 1 -->
+            <div class="lang-item">
+              <div class="lang-info">
+                <span>JavaScript</span>
+                <span>65%</span>
+              </div>
+              <div class="lang-bar-bg"><div class="lang-bar-fill" style="width: 65%; background: #f1e05a;"></div></div>
+            </div>
+            <!-- Language 2 -->
+            <div class="lang-item">
+              <div class="lang-info">
+                <span>HTML &amp; CSS</span>
+                <span>20%</span>
+              </div>
+              <div class="lang-bar-bg"><div class="lang-bar-fill" style="width: 20%; background: #e34c26;"></div></div>
+            </div>
+            <!-- Language 3 -->
+            <div class="lang-item">
+              <div class="lang-info">
+                <span>Python</span>
+                <span>10%</span>
+              </div>
+              <div class="lang-bar-bg"><div class="lang-bar-fill" style="width: 10%; background: #3572a5;"></div></div>
+            </div>
+            <!-- Language 4 -->
+            <div class="lang-item">
+              <div class="lang-info">
+                <span>C++ / Java</span>
+                <span>5%</span>
+              </div>
+              <div class="lang-bar-bg"><div class="lang-bar-fill" style="width: 5%; background: #f34b7d;"></div></div>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="github-graph-wrapper">
-        <h3><i class="fas fa-chart-line"></i> Contribution Graph</h3>
-        <img id="github-graph" draggable="false" src="" alt="Ritesh Maurya's Contribution Graph">
-      </div>
-      <div class="github-graph-wrapper">
-        <h3><i class="fas fa-code"></i> LeetCode Stats & Heatmap</h3>
-        <a href="https://leetcode.com/riteshmaurya07" target="_blank" style="display: contents;">
-          <img id="leetcode-stats" draggable="false" src="" alt="Ritesh Maurya's LeetCode Stats & Heatmap">
-        </a>
+      
+      <div class="telemetry-right">
+        <div class="telemetry-chart-card">
+          <h4>Contribution Heatmap Graph</h4>
+          <div class="chart-wrapper">
+            <img class="lazy-telemetry" data-src="https://github-readme-activity-graph.vercel.app/graph?username=Riteshmaurya07&bg_color=0f172a&color=6366f1&line=6366f1&point=ffffff&area=true&hide_border=true" alt="Ritesh Maurya's Contribution Graph" id="git-graph-img" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='220'><rect width='100%' height='100%' fill='%230f172a'/><text x='50%' y='50%' fill='%239ca3af' text-anchor='middle' alignment-baseline='middle'>Loading Contribution Data...</text></svg>" onerror="this.style.display='none';">
+          </div>
+        </div>
       </div>
     </div>
   </section>
-  <!-- github section ends -->
+  <!-- engineering section ends -->
 
   <!-- contact section starts -->
   <section class="contact" id="contact">
     <h2 class="heading"><i class="fas fa-headset"></i> Get in <span>Touch</span></h2>
 
     <div class="container">
-      <div class="content">
-        <div class="image-box">
-          <img draggable="false" src="./assets/images/contact1.png" alt="Contact Me">
-        </div>
-
-        <form id="contact-form">
+      <div class="content" style="justify-content: center;">
+        <form id="contact-form" style="max-width: 600px; margin: 0 auto; flex: 1;">
           <div class="form-group">
             <div class="field">
-              <input type="text" name="name" placeholder="Name" required>
+              <input type="text" name="name" placeholder="Name" aria-label="Full Name" required>
               <i class="fas fa-user"></i>
             </div>
             <div class="field">
-              <input type="email" name="email" placeholder="Email" required>
+              <input type="email" name="email" placeholder="Email" aria-label="Email Address" required>
               <i class="fas fa-envelope"></i>
             </div>
             <div class="field">
-              <input type="tel" name="phone" placeholder="Phone">
+              <input type="tel" name="phone" placeholder="Phone" aria-label="Phone Number">
               <i class="fas fa-phone-alt"></i>
             </div>
             <div class="message">
-              <textarea placeholder="Message" name="message" required></textarea>
+              <textarea placeholder="Message" name="message" aria-label="Message Content" required></textarea>
               <i class="fas fa-comment-dots"></i>
             </div>
           </div>
@@ -341,44 +566,28 @@
 
 
   <!-- footer section starts -->
-  <section class="footer">
-    <div class="box-container">
-      <div class="box">
-        <h3>Ritesh's Portfolio</h3>
-        <p>Thank you for visiting my personal portfolio website. Connect with me over my professional networks and
-          social handles!</p>
+  <footer class="modern-footer">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <a href="#home"><i class="far fa-registered"></i> Ritesh Maurya</a>
+      </div>
+      <p class="footer-tagline">Building robust, scalable applications and intelligent user experiences.</p>
+      
+      <div class="footer-socials">
+        <a href="https://github.com/Riteshmaurya07" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/riteshmaurya07" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:riteshmauryarm3@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
       </div>
 
-      <div class="box">
-        <h3>quick links</h3>
-        <a href="#home"><i class="fas fa-chevron-circle-right"></i> home</a>
-        <a href="#about"><i class="fas fa-chevron-circle-right"></i> about</a>
-        <a href="#skills"><i class="fas fa-chevron-circle-right"></i> skills</a>
-        <a href="#education"><i class="fas fa-chevron-circle-right"></i> education</a>
-        <a href="#work"><i class="fas fa-chevron-circle-right"></i> projects</a>
-        <a href="#experience"><i class="fas fa-chevron-circle-right"></i> experience</a>
-        <a href="#github-activity"><i class="fas fa-chevron-circle-right"></i> github</a>
-      </div>
-
-      <div class="box">
-        <h3>contact info</h3>
-        <p> <i class="fas fa-envelope"></i> riteshmauryarm3@gmail.com</p>
-        <p> <i class="fas fa-map-marked-alt"></i> Kanpur, India</p>
-        <div class="share">
-          <a href="https://linkedin.com/in/riteshmaurya07" class="fab fa-linkedin" aria-label="LinkedIn"
-            target="_blank"></a>
-          <a href="https://github.com/Riteshmaurya07" class="fab fa-github" aria-label="GitHub" target="_blank"></a>
-          <a href="https://leetcode.com/riteshmaurya07" class="fas fa-code" aria-label="LeetCode" target="_blank"></a>
-          <a href="mailto:riteshmauryarm3@gmail.com" class="fas fa-envelope" aria-label="Mail"></a>
-          <a href="https://twitter.com/riteshmaurya07" class="fab fa-twitter" aria-label="Twitter" target="_blank"></a>
-          <a href="https://t.me/riteshmaurya07" class="fab fa-telegram-plane" aria-label="Telegram" target="_blank"></a>
-        </div>
+      <div class="footer-divider"></div>
+      
+      <div class="footer-bottom">
+        <p class="copyright">&copy; 2026 | Designed &amp; Developed by Ritesh Maurya</p>
+        <p class="tech-stack-info">Built with React + Vite</p>
+        <a href="#home" class="back-to-top-link"><i class="fas fa-chevron-up"></i> Back to Top</a>
       </div>
     </div>
-
-    <h1 class="credit">Designed with <i class="fa fa-heart"></i> by <a href="https://linkedin.com/in/riteshmaurya07"
-        target="_blank">ritesh maurya</a></h1>
-  </section>
+  </footer>
   <!-- footer section ends -->
 
 
@@ -413,6 +622,7 @@
   <!-- ==== ALL MAJOR JAVASCRIPT CDNS ENDS ==== -->
 
   <script src="./assets/js/script.js"></script>
+  <script src="./assets/js/command-palette.js"></script>
 
 </body>
 

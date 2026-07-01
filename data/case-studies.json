@@ -1,0 +1,431 @@
+[
+  {
+    "id": "codex-live",
+    "name": "CodeX Live",
+    "tagline": "AI-powered collaborative coding platform designed for developers and teams.",
+    "image": "codex_live",
+    "duration": "4 Months (Feb 2026 - May 2026)",
+    "role": "Lead Software Engineer",
+    "type": "Web Application (Flagship Project)",
+    "status": "Production Ready",
+    "team_size": "Solo Development / Final Year Capstone",
+    "tech": ["React", "NodeJS", "ExpressJS", "MongoDB", "Socket.io", "Gemini API", "JWT", "Monaco Editor"],
+    "live_link": "https://codexlive-three.vercel.app/",
+    "code_link": "https://github.com/Riteshmaurya07/CodeXLive",
+    "problem": "Collaborative coding tools are typically disconnected from debugging engines and AI reviews, requiring engineers to constantly switch windows between development, terminal consoles, and ChatGPT. This context-switching breaks developer flow and delays feedback loops during peer programming sessions.",
+    "goals": [
+      "Real-time synchronized document sharing across multiple clients",
+      "Instant AI code reviews and optimization tips right in the editor",
+      "Sandboxed environment to run programs directly in the browser",
+      "High-performance state replication with zero lag cursor tracking"
+    ],
+    "architecture": {
+      "frontend": "React, Monaco Code Editor, Socket.io Client, CSS3, Tailwind",
+      "backend": "Node.js, Express, Socket.io Server Gateway, Code Execution Sandbox Proxy",
+      "database": "MongoDB Atlas for workspace state storing and profiles metadata",
+      "auth": "JWT authentication + localStorage state tokens",
+      "communication": "Bidirectional web socket events synchronizing cursors, text selections, document diffs, and live workspace chat signals."
+    },
+    "features": {
+      "Collaboration": [
+        "Synchronized multi-file text editing",
+        "Visual real-time cursor presence tracking",
+        "Team workspace live chat and presence indicators"
+      ],
+      "AI Code Assistant": [
+        "Inline AI reviews with Google Gemini",
+        "Bug detection and structural warnings alerts",
+        "Auto-suggest clean code refactoring"
+      ],
+      "Execution Engine": [
+        "Direct sandboxed script execution",
+        "Formatted console output output window",
+        "Multiple environment runtimes support"
+      ]
+    },
+    "challenges": [
+      {
+        "title": "Socket State Merging Conflicts",
+        "description": "When multiple developers write concurrently on the same line, network latency causes cursor drifting and text overlap, corrupting document buffers.",
+        "solution": "Implemented a debounced diff-patch sequence tracking edits. Document edits are serialized as light transaction diff operations, resolved sequentially on the Socket.io backend, and broadcast as unified snapshots back to the nodes."
+      },
+      {
+        "title": "Secure In-Browser Script Execution",
+        "description": "Allowing arbitrary scripts execution on the host server creates high security risks (unlimited loops, shell escape scripts).",
+        "solution": "Engineered a containerized execution sandbox that routes execution payloads to isolated runtime environments with memory limitations and short execution timeouts."
+      }
+    ],
+    "decisions": [
+      {
+        "tech": "React & Monaco Editor",
+        "reason": "Monaco provides the identical industrial-grade editor engine powering VS Code, yielding a high-quality coding UI with native syntax highlights and keyboard hooks."
+      },
+      {
+        "tech": "Socket.io",
+        "reason": "Guarantees low-latency, duplex state synchronizations with automatic reconnect fallback systems to combat shaky network connections."
+      }
+    ],
+    "lessons": [
+      "Building robust offline sync caches is crucial to prevent document state losses.",
+      "Optimizing socket frame payloads by compressing diff payloads significantly decreases client network bandwidth usage."
+    ],
+    "results": [
+      "Achieved seamless 60fps real-time updates for document edits and cursor tracking.",
+      "Reduced local program compilation setup times by moving execution sandboxes completely into the cloud.",
+      "Completed a successful capstone prototype that solves remote team pair-programming context shifts."
+    ]
+  },
+  {
+    "id": "ciphersql-studio",
+    "name": "CipherSQL Studio",
+    "tagline": "Secure web client and relational database visual management platform.",
+    "image": "ciphersql",
+    "duration": "3 Months (Nov 2025 - Jan 2026)",
+    "role": "Full Stack Engineer",
+    "type": "Database Utility Tool",
+    "status": "Production Ready",
+    "team_size": "Solo Developer",
+    "tech": ["React", "NodeJS", "ExpressJS", "PostgreSQL", "TailwindCSS", "JWT", "Relational Graph Engines"],
+    "live_link": "https://cipher-sql-studio-seven.vercel.app/",
+    "code_link": "https://github.com/Riteshmaurya07/CipherSQLStudio",
+    "problem": "Traditional database administrators rely on desktop SQL clients that are heavy, lack dynamic relational visualization, and fail to secure connection configurations. Non-technical staff find it difficult to analyze complex schema keys and query database metrics easily.",
+    "goals": [
+      "Zero-install SQL editor with auto-completes and quick execution",
+      "Dynamic visual mapping of relational foreign keys and table links",
+      "Secure credential stores preserving databases config tokens",
+      "Comprehensive telemetry dashboard documenting transaction speeds"
+    ],
+    "architecture": {
+      "frontend": "React SPA, interactive node graphs, Tailwind styling layout",
+      "backend": "Node/Express secure proxy forwarding parsed SQL commands",
+      "database": "PostgreSQL relational schemas",
+      "auth": "Encryption keys + JWT authentication tokens for connection records",
+      "communication": "Secure REST API communication routing database configurations with payload encryptions."
+    },
+    "features": {
+      "SQL Interface": [
+        "In-browser SQL editor with query formatters",
+        "Paginated results table and export options",
+        "Saved history lists of executed queries"
+      ],
+      "Relational Maps": [
+        "Interactive node diagrams mapping keys",
+        "Visual schema explorer detailing column types",
+        "Relational tables layout drag-and-drop"
+      ]
+    },
+    "challenges": [
+      {
+        "title": "Translating Relational Coordinates",
+        "description": "Dynamically converting dynamic relational tables schema coordinates into logical nodes that don't overlap.",
+        "solution": "Integrated a graph rendering algorithm that parses raw database table primary-foreign configurations and computes balanced layout coordinates automatically."
+      },
+      {
+        "title": "Securing Database Connection Records",
+        "description": "Preserving database credentials on the cloud without exposing passwords to cross-site scripting (XSS).",
+        "solution": "Implemented AES-256 encryption on credentials storage records. Decryption handles run exclusively in-memory on the server and keys are shielded behind environment boundaries."
+      }
+    ],
+    "decisions": [
+      {
+        "tech": "React Node Graph Engine",
+        "reason": "Provides interactive layout hooks, custom link colors, and dynamic resizing to support larger enterprise schemas without canvas lag."
+      },
+      {
+        "tech": "PostgreSQL",
+        "reason": "Its robust database system supports parsing native schema catalogs, tables, and keys metadata cleanly."
+      }
+    ],
+    "lessons": [
+      "Strict data sanitization and parameterized queries are critical to protect connections from SQL injections.",
+      "Caching connection pools on the proxy dramatically speeds up table loading."
+    ],
+    "results": [
+      "Created a zero-install database client capable of visually resolving schemas in under 500ms.",
+      "Delivered a dashboard interface that simplifies database telemetry for non-experts."
+    ]
+  },
+  {
+    "id": "devfolio",
+    "name": "DevFolio",
+    "tagline": "AI-powered developer platform combining portfolio analytics, resume builders, and career guidance.",
+    "image": "devfolio",
+    "duration": "2 Months (April 2026 - May 2026)",
+    "role": "Lead Frontend Architect",
+    "type": "AI-Powered Developer Productivity Platform",
+    "status": "Production Ready",
+    "team_size": "Solo Developer",
+    "tech": ["React", "Vite", "Tailwind CSS", "Zustand", "Gemini AI", "Framer Motion", "Recharts", "JavaScript"],
+    "live_link": "https://github.com/Riteshmaurya07",
+    "code_link": "https://github.com/Riteshmaurya07",
+    "problem": "Developers struggle to manage fragmented profiles across GitHub, LeetCode, and job boards. Generating tailored resumes for diverse applications and tracking job pipelines manually leads to lost time, outdated metrics, and unguided career pathways.",
+    "goals": [
+      "Integrate real-time GitHub APIs for dynamic coding profile analytics dashboards",
+      "Provide automated ATS resume optimization guides powered by Gemini AI",
+      "Map specialized interactive learning roadmaps for target tech stacks",
+      "Unify job application pipeline tracking and interviews calendar under one view"
+    ],
+    "architecture": {
+      "frontend": "React 18 SPA, Recharts visualizations, Lucide icons, Framer Motion animations",
+      "backend": "Client-side API service layer connecting directly to Gemini AI and GitHub REST APIs",
+      "database": "Zustand persistent local stores caching job pipelines, resume templates, and logs",
+      "auth": "Local client profiles setup + localStorage preference caching",
+      "communication": "Direct Axios HTTP queries requesting structured streaming tokens from Gemini AI models"
+    },
+    "features": {
+      "AI Career Advisor": [
+        "Personalized career guidance chats",
+        "Automated learning roadmaps generator"
+      ],
+      "Resume & Job Tracker": [
+        "ATS keywords check & resume templates builder",
+        "Interactive Kanban board job application pipeline tracker"
+      ],
+      "Analytics Panel": [
+        "Dynamic GitHub repositories metrics charts",
+        "Coding logs and visual habits charts via Recharts"
+      ]
+    },
+    "challenges": [
+      {
+        "title": "Gemini Stream Handling in React",
+        "description": "Streaming tokens from Gemini API created frequent state redraw cycles, slowing down UI transitions and locking browser inputs.",
+        "solution": "Designed a debounced stream collector buffer. Stream chunk arrays are stored in custom refs and flushed to the Zustand state store in controlled batch intervals, maintaining 60fps animations."
+      },
+      {
+        "title": "Centralized State Sync",
+        "description": "Syncing complex profile setups, resume structures, and job boards led to state drift and storage latency.",
+        "solution": "Implemented Zustand slices architecture, separating the state into atomic blocks with localStorage persistence middlewares."
+      }
+    ],
+    "decisions": [
+      {
+        "tech": "Zustand State Store",
+        "reason": "Provides a lightweight, developer-friendly boilerplate-free state manager that avoids the performance issues of React Context under high-frequency updates."
+      },
+      {
+        "tech": "Recharts Visualizations",
+        "reason": "Uses declarative React components that adapt dynamically to responsive container sizes and dark mode variables."
+      }
+    ],
+    "lessons": [
+      "Provider-based abstraction layers make switching between Gemini and other LLM models simple.",
+      "Debouncing React state updates during active API text streaming is crucial to keep transitions fluid."
+    ],
+    "results": [
+      "Created a fully unified career hub dashboard reducing portfolio setup times.",
+      "Achieved 100/100 performance marks by avoiding server-side database latency."
+    ]
+  },
+  {
+    "id": "matty",
+    "name": "Matty Graphic Design Tool",
+    "tagline": "Interactive design and whiteboarding tool for graphics templates.",
+    "image": "matty",
+    "duration": "2 Months (June 2025 - July 2025)",
+    "role": "Software Developer Intern",
+    "type": "GNCIPL Internship Flagship Project",
+    "status": "Completed & Deployed",
+    "team_size": "Collaboration with GNCIPL Engineers",
+    "tech": ["React", "Vite", "TailwindCSS", "Excalidraw API", "NodeJS", "ExpressJS", "MongoDB"],
+    "live_link": "https://matty-graphic-design-tool.vercel.app/",
+    "code_link": "https://github.com/Riteshmaurya07/Matty_Graphic_design_tool",
+    "problem": "Designing and sharing team marketing templates internally required heavy graphic editor installations. Non-designers struggled to adapt templates, leading to visual deviations, inconsistent assets, and delays in marketing campaigns.",
+    "goals": [
+      "Custom vector drawing board operating directly inside the browser",
+      "Persistent cloud workspace to save, edit, and export visual works",
+      "Structured templates directory for pre-set layouts",
+      "Team authentication systems separating personal and shared files"
+    ],
+    "architecture": {
+      "frontend": "React SPA, Excalidraw custom integration wrapper, Tailwind",
+      "backend": "Node.js/Express API routing template saves and workspace states",
+      "database": "MongoDB schemas cataloging canvas states, coordinates, and team nodes",
+      "auth": "JWT authentication",
+      "communication": "Standard REST APIs sending serialized JSON canvas arrays to databases."
+    },
+    "features": {
+      "Canvas Board": [
+        "Dynamic shape drawing, text layers, and custom assets upload",
+        "Multi-stage undo/redo historical action tracking",
+        "Freehand drawing and color pickers"
+      ],
+      "Template Center": [
+        "Shared directory with pre-styled graphic presets",
+        "One-click clone and edit actions",
+        "Asset categorizations by dimensions"
+      ]
+    },
+    "challenges": [
+      {
+        "title": "Saving Complex Vector Coordinates",
+        "description": "Saving canvas shapes led to massive JSON documents, causing heavy database load and network lag on save triggers.",
+        "solution": "Developed a custom compressor filtering out unchanged vector properties (e.g. redundant viewport coordinates), shrinking the save payload by 75%."
+      },
+      {
+        "title": "Ensuring Offline Canvas Recovery",
+        "description": "Network drops during template updates resulted in lost changes and corrupted workspace files.",
+        "solution": "Implemented a dual-storage strategy. Changes are saved instantly to local storage and synchronized with the database in background intervals using a retry queue."
+      }
+    ],
+    "decisions": [
+      {
+        "tech": "Excalidraw Engine Core",
+        "reason": "Provides a clean, hand-drawn vector sketch style, supports custom tools, and has a lightweight drawing engine."
+      },
+      {
+        "tech": "Vite Bundler",
+        "reason": "Significantly optimized hot-module replacement and compilation times for drawing canvas bundles compared to standard bundlers."
+      }
+    ],
+    "lessons": [
+      "Decoupling canvas state managers from React render loops prevents redraw lag.",
+      "Dynamic background auto-saves greatly improve UX and security."
+    ],
+    "results": [
+      "Successfully integrated custom template editors into GNCIPL team marketing flows.",
+      "Maintained 60fps canvas performance on heavy template edits.",
+      "Delivered a production-ready application to streamline team design tasks."
+    ]
+  },
+  {
+    "id": "docchat",
+    "name": "DocChat",
+    "tagline": "AI-powered document assistant for dynamic conversational Q&A on PDFs.",
+    "image": "docchat",
+    "duration": "2 Months (Aug 2025 - Sept 2025)",
+    "role": "Lead Developer",
+    "type": "AI Integration Project",
+    "status": "Completed",
+    "team_size": "Solo Developer",
+    "tech": ["React", "NodeJS", "ExpressJS", "MongoDB", "Gemini API", "TailwindCSS", "PDF-Parse"],
+    "live_link": "https://doc-chat-blue.vercel.app/",
+    "code_link": "https://github.com/Riteshmaurya07/DocChat",
+    "problem": "Reading, analyzing, and extracting data from long academic or financial documents is tedious. Existing search tools only locate exact keyword matches, failing to understand semantic context or answer conceptual questions.",
+    "goals": [
+      "AI PDF layout parsing and unstructured text extraction",
+      "Semantic conversational assistant answering prompts directly from documents",
+      "Persistent chat history lists linked to user workspaces",
+      "Responsive, clean file dropzone interface"
+    ],
+    "architecture": {
+      "frontend": "React SPA with dynamic chat layouts and scroll triggers",
+      "backend": "Node/Express parser processing PDF arrays and routing embeddings",
+      "database": "MongoDB archiving history metadata and text references",
+      "auth": "JWT secure session tokens",
+      "communication": "REST API routing parsed document chunks and chat payloads to Google Gemini."
+    },
+    "features": {
+      "AI Interface": [
+        "Contextual Q&A on long documents",
+        "Automatic layout summary generation",
+        "Interactive citation links pointing to source text segments"
+      ],
+      "File Handling": [
+        "Drag-and-drop file uploader",
+        "Visual progress indicator during processing",
+        "Support for multiple PDF documents"
+      ]
+    },
+    "challenges": [
+      {
+        "title": "Context Window Exhaustion",
+        "description": "Passing entire PDF text to the LLM model exceeds context token limits and increases API latency.",
+        "solution": "Developed a text-chunking system. The backend splits PDFs into overlap blocks, compares query embeddings using local vector heuristics, and forwards only the relevant context block to the Gemini API."
+      },
+      {
+        "title": "Large PDF Processing Failures",
+        "description": "Processing PDFs over 50 pages caused API timeout errors on serverless endpoints.",
+        "solution": "Implemented chunked stream processing. Text parsing runs in stages, showing a progress indicator, and stores text references as document indexes."
+      }
+    ],
+    "decisions": [
+      {
+        "tech": "Google Gemini API",
+        "reason": "Offers large context windows, fast response times, and powerful text extraction capabilities compared to other providers."
+      },
+      {
+        "tech": "TailwindCSS",
+        "reason": "Enabled fast layout prototyping for chat message boxes, drawers, and drag-and-drop widgets."
+      }
+    ],
+    "lessons": [
+      "Implementing overlaps in text chunking is vital to prevent losing context at split points.",
+      "Pre-extracting document structures speeds up response times."
+    ],
+    "results": [
+      "Enabled users to question long PDF materials, getting contextual answers in under 1 second.",
+      "Maintained low server resource usage by outsourcing AI processing."
+    ]
+  },
+  {
+    "id": "wanderlust",
+    "name": "Wanderlust",
+    "tagline": "Full-stack travel booking application simulating vacation rentals.",
+    "image": "wanderlust",
+    "duration": "3 Months (Aug 2024 - Oct 2024)",
+    "role": "Full Stack Developer",
+    "type": "Full Stack Web Application",
+    "status": "Completed & Deployed",
+    "team_size": "Solo Developer",
+    "tech": ["NodeJS", "ExpressJS", "MongoDB", "EJS", "Bootstrap", "Mapbox API", "Cloudinary"],
+    "live_link": "https://wanderlust-3f61.onrender.com/",
+    "code_link": "https://github.com/Riteshmaurya07/wanderlust",
+    "problem": "Vacation listing platforms require complex coordination of listings, reviews, geographical mapping, and image uploads. Building a reliable server-side MVC architecture to handle these inputs securely is a core software engineering challenge.",
+    "goals": [
+      "Comprehensive CRUD operations for listing properties",
+      "Interactive map visualizers showing vacation positions",
+      "Clean user reviews, ratings, and feedback loops",
+      "Reliable image storage and user sessions"
+    ],
+    "architecture": {
+      "frontend": "EJS server-side rendering layouts, Bootstrap styling elements",
+      "backend": "Node.js, Express framework routing MVC controller logic",
+      "database": "MongoDB Atlas storing listings, user records, and review schemas",
+      "auth": "Cookie sessions and passport local authentication modules",
+      "communication": "Server-side template injection rendering Mapbox API maps and listing metadata."
+    },
+    "features": {
+      "Listing Portal": [
+        "Create, read, update, and delete vacation listings",
+        "Image uploads with automatic Cloudinary storage",
+        "Price, location, and description details management"
+      ],
+      "Interactions": [
+        "Secure user reviews and rating stars",
+        "Map layouts highlighting exact location pins",
+        "Authentication checks limiting edits to owners"
+      ]
+    },
+    "challenges": [
+      {
+        "title": "Cloudinary CDN Sync issues",
+        "description": "Updating or deleting listings left orphaned image files in Cloudinary, wasting cloud storage allocation.",
+        "solution": "Integrated Mongoose database middlewares. Deleting a database listing triggers a hook that extracts the asset public ID and deletes it from Cloudinary."
+      },
+      {
+        "title": "Parsing Location Pins on Server side",
+        "description": "Geocoding location names (e.g. 'Paris') into map coordinates requires API lookups that slow page rendering.",
+        "solution": "Implemented pre-geocoding. Location names are parsed via Mapbox Geocoding API on listing creation, saving lat-long coordinates directly to the document."
+      }
+    ],
+    "decisions": [
+      {
+        "tech": "Express MVC Architecture",
+        "reason": "Keeps routing, controller actions, and database schemas separated for clean codebase organization."
+      },
+      {
+        "tech": "EJS Templates",
+        "reason": "Allows fast HTML rendering on the server side, keeping page assets lightweight and improving performance."
+      }
+    ],
+    "lessons": [
+      "Always design database schemas with cascading delete rules to keep data clean.",
+      "Input validation on both client and server sides is essential for data integrity."
+    ],
+    "results": [
+      "Completed a robust clone demonstrating server-side MVC capabilities.",
+      "Deployed application to Render with live image uploads and mapping services."
+    ]
+  }
+]

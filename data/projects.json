@@ -1,0 +1,302 @@
+[
+  {
+    "id": "codex-live",
+    "name": "CodeX Live",
+    "desc": "AI-powered collaborative coding platform designed for developers and teams. Provides real-time multi-file collaboration, AI-assisted code reviews, and high-performance execution. Flagship/Final Year Project.",
+    "image": "codex_live",
+    "category": "mern",
+    "featured": true,
+    "flagship": true,
+    "status": "Production Ready",
+    "tech": ["React", "NodeJS", "ExpressJS", "MongoDB", "Socket.io", "Gemini API", "JWT"],
+    "highlights": [
+      "Real-time multi-file collaboration via Socket.io",
+      "Automated AI code review & suggestions utilizing Gemini API",
+      "High-performance code execution engine sandboxed integration",
+      "Live cursor tracking, collaborative chat & state persistence"
+    ],
+    "links": {
+      "view": "https://codexlive-three.vercel.app/",
+      "code": "https://github.com/Riteshmaurya07/CodeXLive"
+    }
+  },
+  {
+    "id": "ciphersql-studio",
+    "name": "CipherSQL Studio",
+    "desc": "Secure database management platform enabling users to execute queries, manage databases, monitor activity, and interact with data through a modern dashboard.",
+    "image": "ciphersql",
+    "category": "mern",
+    "featured": true,
+    "flagship": false,
+    "status": "Production Ready",
+    "tech": ["React", "NodeJS", "ExpressJS", "PostgreSQL", "TailwindCSS", "JWT"],
+    "highlights": [
+      "Secure SQL editor with immediate syntax query execution",
+      "Interactive relational schema visualizer with live mappings",
+      "Live database connection monitoring & encryption for credentials",
+      "Performance statistics log dashboard for execution history"
+    ],
+    "links": {
+      "view": "https://cipher-sql-studio-seven.vercel.app/",
+      "code": "https://github.com/Riteshmaurya07/CipherSQLStudio"
+    }
+  },
+  {
+    "id": "devfolio",
+    "name": "DevFolio – AI-Powered Developer Portfolio & Career Hub",
+    "desc": "A modern AI-powered developer platform that combines portfolio management, GitHub analytics, resume building, career guidance, coding progress tracking, and job management into a unified dashboard. Built with React, Zustand, Tailwind CSS, Framer Motion, and Gemini AI to deliver personalized insights and an interactive developer experience.",
+    "image": "devfolio",
+    "category": "mern",
+    "featured": true,
+    "flagship": false,
+    "status": "Production Ready",
+    "tech": ["React", "Vite", "Tailwind CSS", "Zustand", "Gemini AI", "Framer Motion", "Recharts", "JavaScript"],
+    "highlights": [
+      "AI-powered Career Advisor & Learning Roadmap Generator",
+      "Resume Builder & ATS Guidance module integration",
+      "GitHub Analytics & Coding Activity dashboards",
+      "Interactive Job Application Tracker workflow",
+      "Zustand unified state management & customizable triggers"
+    ],
+    "links": {
+      "view": "https://github.com/Riteshmaurya07",
+      "code": "https://github.com/Riteshmaurya07"
+    }
+  },
+  {
+    "id": "matty",
+    "name": "Matty Graphic Design Tool",
+    "desc": "Browser-based interactive design and whiteboarding tool featuring a vector canvas editor, workspace saves, and customizable graphic templates.",
+    "image": "matty",
+    "category": "mern",
+    "featured": true,
+    "flagship": false,
+    "status": "GNCIPL Intern Flagship",
+    "tech": ["React", "Vite", "TailwindCSS", "Excalidraw", "NodeJS", "ExpressJS", "MongoDB"],
+    "highlights": [
+      "Developed during software developer internship at GNCIPL",
+      "Real-world application for internal graphic template creations",
+      "Excalidraw vector engine customization for canvas layout drawing",
+      "Persistent cloud workspace savings & custom template presets"
+    ],
+    "links": {
+      "view": "https://matty-graphic-design-tool.vercel.app/",
+      "code": "https://github.com/Riteshmaurya07/Matty_Graphic_design_tool"
+    }
+  },
+  {
+    "id": "docchat",
+    "name": "DocChat",
+    "desc": "AI-powered document assistant allowing users to upload PDFs, generate summaries, ask questions, and maintain conversation history. Built with Gemini API.",
+    "image": "docchat",
+    "category": "mern",
+    "featured": true,
+    "flagship": false,
+    "status": "Completed",
+    "tech": ["React", "NodeJS", "ExpressJS", "MongoDB", "Gemini API", "TailwindCSS"],
+    "highlights": [
+      "AI-assisted text extraction and PDF layout chunk processing",
+      "Conversational memory history saved to MongoDB",
+      "Vector embeddings search optimization for context mappings",
+      "Responsive drag-and-drop file uploader with visual loader"
+    ],
+    "links": {
+      "view": "https://doc-chat-blue.vercel.app/",
+      "code": "https://github.com/Riteshmaurya07/DocChat"
+    }
+  },
+  {
+    "id": "wanderlust",
+    "name": "Wanderlust",
+    "desc": "A travel listing and booking application simulating Airbnb, with full CRUD, user authentication, review systems, and map integrations. Built using Node, Express, MongoDB, and EJS.",
+    "image": "wanderlust",
+    "category": "mern",
+    "featured": true,
+    "flagship": false,
+    "status": "Completed",
+    "tech": ["NodeJS", "ExpressJS", "MongoDB", "EJS", "Bootstrap", "Mapbox API"],
+    "highlights": [
+      "Full CRUD listings module with image upload capabilities",
+      "Cookie-based user authentication and review rating systems",
+      "Interactive map overlays utilizing the Mapbox GL JS API",
+      "Cloudinary cloud storage integration for responsive listing photos"
+    ],
+    "links": {
+      "view": "https://wanderlust-3f61.onrender.com/",
+      "code": "https://github.com/Riteshmaurya07/wanderlust"
+    }
+  },
+  {
+    "id": "weather-app",
+    "name": "Weather App",
+    "desc": "Real-time weather forecasting application providing updates via OpenWeather API, featuring a clean responsive dashboard built using React and Tailwind.",
+    "image": "weatherapp",
+    "category": "basicweb",
+    "featured": true,
+    "flagship": false,
+    "status": "Completed",
+    "tech": ["React", "TailwindCSS", "OpenWeather API", "CSS3"],
+    "highlights": [
+      "Real-time forecasts and data retrieval via OpenWeather API",
+      "Dynamic weather graphics adapting to city climates",
+      "Local storage integration for favorite cities caching",
+      "Optimized API query configurations to prevent rate exhaustion"
+    ],
+    "links": {
+      "view": "https://weather-app-nu-orpin-25.vercel.app/",
+      "code": "https://github.com/Riteshmaurya07/Weather-App"
+    }
+  },
+  {
+    "id": "ai-waste-classifier",
+    "name": "AI Waste Classifier",
+    "desc": "AI-powered waste classification system using deep learning (TensorFlow, MobileNetV2) to identify and classify waste into Cardboard, Glass, Metal, Paper, Plastic, and Trash.",
+    "image": "garbage_classification",
+    "category": "basicweb",
+    "featured": false,
+    "flagship": false,
+    "status": "Completed",
+    "tech": ["Python", "TensorFlow", "MobileNetV2", "HTML5"],
+    "highlights": [
+      "Deep learning model for classification",
+      "MobileNetV2 architecture optimization"
+    ],
+    "links": {
+      "view": "https://github.com/Riteshmaurya07",
+      "code": "https://github.com/Riteshmaurya07"
+    }
+  },
+  {
+    "id": "laceup",
+    "name": "LaceUp",
+    "desc": "A modern, highly responsive e-commerce web landing page for a premium shoe retailer. Crafted with sleek transitions, hover effects, and aesthetic layouts.",
+    "image": "laceup",
+    "category": "basicweb",
+    "featured": false,
+    "flagship": false,
+    "status": "Completed",
+    "tech": ["HTML5", "CSS3", "JavaScript"],
+    "highlights": [
+      "Responsive CSS layouts",
+      "Modern animations and aesthetic design"
+    ],
+    "links": {
+      "view": "https://laceup-nv42.vercel.app/",
+      "code": "https://github.com/Riteshmaurya07/laceup"
+    }
+  },
+  {
+    "id": "simon-says",
+    "name": "Simon Says Game",
+    "desc": "An interactive browser game implementing the classic Simon Says logic. Features dynamic flash sequences, score tracking, responsive sounds, and clean animations.",
+    "image": "simon_says",
+    "category": "basicweb",
+    "featured": false,
+    "flagship": false,
+    "status": "Completed",
+    "tech": ["HTML5", "CSS3", "JavaScript"],
+    "highlights": [
+      "State-machine logic simulation",
+      "Clean CSS animations"
+    ],
+    "links": {
+      "view": "https://simon-says-two-alpha.vercel.app/",
+      "code": "https://github.com/Riteshmaurya07/simonSays"
+    }
+  },
+  {
+    "id": "spotify-ui",
+    "name": "Spotify UI Clone",
+    "desc": "A pixel-perfect UI clone of the Spotify web player. Features fully responsive sidebars, custom media controller elements, and clean grid layouts for playlists.",
+    "image": "spotify_clone",
+    "category": "basicweb",
+    "featured": false,
+    "flagship": false,
+    "status": "Completed",
+    "tech": ["HTML5", "CSS3", "JavaScript"],
+    "highlights": [
+      "Pixel-perfect replica styling",
+      "Responsive design layouts"
+    ],
+    "links": {
+      "view": "https://spotify-clone-mauve-chi.vercel.app/",
+      "code": "https://github.com/Riteshmaurya07/spotifyClone"
+    }
+  },
+  {
+    "id": "lottery-ticket",
+    "name": "Lottery Ticket Simulator",
+    "desc": "A web-based simulator for lottery ticket generation. Implements dynamic algorithms to match generated numbers with winning tickets, complete with alerts.",
+    "image": "lottery_ticket",
+    "category": "basicweb",
+    "featured": false,
+    "flagship": false,
+    "status": "Completed",
+    "tech": ["HTML5", "CSS3", "JavaScript"],
+    "highlights": [
+      "Dynamic math validation logic",
+      "State-based triggers"
+    ],
+    "links": {
+      "view": "https://lottery-ticket.vercel.app/",
+      "code": "https://github.com/Riteshmaurya07/LotteryTicket"
+    }
+  },
+  {
+    "id": "blog-api",
+    "name": "Blogging Platform API",
+    "desc": "A secure RESTful API built for a blogging website, featuring JWT authentication, post creation/modification, user profiles, and commenting system.",
+    "image": "blog_api",
+    "category": "mern",
+    "featured": false,
+    "flagship": false,
+    "status": "Completed",
+    "tech": ["NodeJS", "ExpressJS", "MongoDB", "JWT Auth"],
+    "highlights": [
+      "Secure REST API routing modules",
+      "JWT user database locks"
+    ],
+    "links": {
+      "view": "https://github.com/Riteshmaurya07/blog_api",
+      "code": "https://github.com/Riteshmaurya07/blog_api"
+    }
+  },
+  {
+    "id": "todo-app",
+    "name": "Task Todo App",
+    "desc": "A clean productivity tool for listing, organizing, and completing tasks. Designed with persistent local storage, custom categorization, and state filters.",
+    "image": "todo_app",
+    "category": "basicweb",
+    "featured": false,
+    "flagship": false,
+    "status": "Completed",
+    "tech": ["HTML5", "CSS3", "JavaScript"],
+    "highlights": [
+      "Local storage state caching",
+      "Flexible filters workflow"
+    ],
+    "links": {
+      "view": "https://github.com/Riteshmaurya07/todoApp",
+      "code": "https://github.com/Riteshmaurya07/todoApp"
+    }
+  },
+  {
+    "id": "omega-orion",
+    "name": "Omega Orion landing",
+    "desc": "A premium tech-themed sci-fi landing page with custom CSS layouts, high-performance interactions, and modern web design aesthetics.",
+    "image": "omegaorion",
+    "category": "basicweb",
+    "featured": false,
+    "flagship": false,
+    "status": "Completed",
+    "tech": ["HTML5", "CSS3", "JavaScript"],
+    "highlights": [
+      "Custom layout and visual styling",
+      "Interactive keyframes animation"
+    ],
+    "links": {
+      "view": "https://omegaorion.vercel.app/",
+      "code": "https://github.com/Riteshmaurya07/omegaorion"
+    }
+  }
+]

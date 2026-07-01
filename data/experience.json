@@ -1,0 +1,23 @@
+[
+  {
+    "company": "GNCIPL",
+    "role": "Software Developer | Internship",
+    "duration": "June 2025 - July 2025",
+    "bullets": [
+      "Engineered an interactive template whiteboard canvas utilizing custom Excalidraw vector drawing boards and React components.",
+      "Optimized database storage payloads by 75% through specialized serialization filters removing redundant viewport coordinates.",
+      "Implemented double-buffered offline saving strategies using local caches and retry triggers to secure template states.",
+      "Collaborated with senior engineering staff on code structures, API latency optimizations, and production build releases."
+    ]
+  },
+  {
+    "company": "CodSoft",
+    "role": "Web Developer | Training Internship",
+    "duration": "June 2024 - July 2024",
+    "bullets": [
+      "Engineered client-side responsive features and dynamic components utilizing HTML, CSS, JavaScript, and Bootstrap.",
+      "Managed version control repositories using Git, learning clean code structuring and collaborative code reviews.",
+      "Maintained local states and completed structured projects, achieving key hands-on outcomes in web development workflows."
+    ]
+  }
+]

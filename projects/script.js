@@ -1,5 +1,18 @@
 $(document).ready(function () {
 
+    // Dynamic Scroll Progress Bar
+    const progBar = document.createElement("div");
+    progBar.id = "scroll-progress";
+    progBar.className = "scroll-progress-bar";
+    document.body.prepend(progBar);
+
+    window.addEventListener("scroll", () => {
+        const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = (winScroll / height) * 100;
+        progBar.style.width = scrolled + "%";
+    });
+
     // Navbar toggler
     $('#menu').click(function () {
         $(this).toggleClass('fa-times');
@@ -19,7 +32,12 @@ $(document).ready(function () {
 
     // Theme Toggle Functionality
     const themeToggleBtn = document.getElementById('theme-toggle');
-    const currentTheme = localStorage.getItem('theme') || 'light';
+    let currentTheme = localStorage.getItem('theme');
+    
+    if (!currentTheme) {
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        currentTheme = prefersDark ? 'dark' : 'light';
+    }
 
     // Apply saved theme on load
     if (currentTheme === 'dark') {
@@ -62,10 +80,10 @@ document.addEventListener('visibilitychange',
 
 // fetch projects start
 function getProjects() {
-    return fetch("projects.json")
+    return fetch("../data/projects.json")
         .then(response => response.json())
         .then(data => {
-            return data
+            return data;
         });
 }
 
@@ -73,25 +91,67 @@ function showProjects(projects) {
     let projectsContainer = document.querySelector(".work .box-container");
     let projectsHTML = "";
     projects.forEach(project => {
-        let featuredClass = project.featured ? "featured-project" : "";
+        let flagshipClass = project.flagship ? "flagship-project" : "";
+        let ribbonHTML = project.flagship ? `<div class="featured-ribbon"><i class="fas fa-crown"></i> Flagship</div>` : "";
+        
+        let statusClass = "status-ready";
+        if (project.status && project.status.includes("Intern")) {
+            statusClass = "status-internship";
+        }
+
+        let highlightsHTML = "";
+        if (project.highlights && project.highlights.length) {
+            highlightsHTML = `
+            <div class="project-highlights">
+              <h4>Engineering Highlights:</h4>
+              <ul>
+                ${project.highlights.map(h => `<li><i class="fas fa-check-circle"></i> ${h}</li>`).join('')}
+              </ul>
+            </div>`;
+        }
+
+        let techHTML = "";
+        if (project.tech && project.tech.length) {
+            techHTML = `<div class="project-tech">`;
+            project.tech.forEach(t => {
+                techHTML += `<span>${t}</span>`;
+            });
+            techHTML += `</div>`;
+        }
+
+        let caseStudyBtnHTML = "";
+        const hasCaseStudy = ["codex-live", "ciphersql-studio", "devfolio", "matty", "docchat", "wanderlust"].includes(project.id);
+        if (hasCaseStudy) {
+            caseStudyBtnHTML = `<a href="./case-study.html?id=${project.id}" class="btn case-study-btn" style="width: 100%; text-align: center; background: var(--primary-color); color: #fff; margin-bottom: 0.8rem; box-shadow: 0 4px 10px var(--primary-glow); display: flex; align-items: center; justify-content: center; gap: 0.8rem; padding: 1.2rem; border-radius: 8px; font-size: 1.4rem; font-weight: 700;"><i class="fas fa-file-alt"></i> Read Case Study</a>`;
+        }
+
         projectsHTML += `
         <div class="grid-item ${project.category}">
-        <div class="box tilt ${featuredClass}">
-      <img draggable="false" src="../assets/images/projects/${project.image}.png" alt="${project.name}" />
-      <div class="content">
-        <div class="tag">
-          <h3>${project.name}</h3>
-        </div>
-        <div class="desc">
-          <p>${project.desc}</p>
-          <div class="btns">
-            <a href="${project.links.view}" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>
-            <a href="${project.links.code}" class="btn" target="_blank">Code <i class="fas fa-code"></i></a>
+          <div class="box tilt ${flagshipClass}">
+            ${ribbonHTML}
+            <div class="project-image-wrapper">
+              <img draggable="false" loading="lazy" src="../assets/images/projects/${project.image}.png" alt="${project.name}" />
+            </div>
+            <div class="content">
+              <div class="project-header">
+                <h3>${project.name}</h3>
+                <span class="status-badge ${statusClass}">${project.status || 'Completed'}</span>
+              </div>
+              <div class="desc">
+                <p>${project.desc}</p>
+                ${highlightsHTML}
+                ${techHTML}
+                <div class="btns" style="display: flex; flex-direction: column; width: 100%;">
+                  ${caseStudyBtnHTML}
+                  <div style="display: flex; gap: 1rem; width: 100%;">
+                    <a href="${project.links.view}" class="btn view-btn" target="_blank" style="flex: 1; padding: 1.2rem; justify-content: center; align-items: center; display: inline-flex; gap: 0.5rem;"><i class="fas fa-eye"></i> Live Demo</a>
+                    <a href="${project.links.code}" class="btn code-btn" target="_blank" style="flex: 1; padding: 1.2rem; justify-content: center; align-items: center; display: inline-flex; gap: 0.5rem;"><i class="fab fa-github"></i> Code</a>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-    </div>
-    </div>`
+        </div>`
     });
     projectsContainer.innerHTML = projectsHTML;
 

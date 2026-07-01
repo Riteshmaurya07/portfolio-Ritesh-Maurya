@@ -97,140 +97,299 @@
 }
 
 /* Projects (Work) Section */
+/* Projects (Work) Section */
 .work {
   background: var(--work-bg);
+  padding: 8rem 10% 6rem 10%;
 }
 
 .work h2 {
-  color: #fff;
+  color: var(--heading-color);
 }
 
 .work .heading span {
-  color: #fbbf24;
+  color: var(--heading-span-color);
 }
 
 .work .heading::after {
-  background: #fbbf24;
+  background: var(--heading-span-color);
 }
 
 .work .box-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 2.5rem;
-  padding: 1rem 0;
+  gap: 3rem;
+  padding: 2rem 0;
+  width: 100%;
 }
 
 .work .box-container .box {
-  border-radius: 12px;
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-radius: 16px;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
   overflow: hidden;
-  height: 35rem;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  height: 100%;
+  box-shadow: 0 10px 30px var(--shadow-light);
+  transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+  position: relative;
 }
 
-.work .box-container .box img {
-  height: 100%;
+.work .box-container .box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px var(--primary-glow);
+  border-color: var(--primary-color);
+}
+
+.project-image-wrapper {
   width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-bottom: 1px solid var(--border-color);
+  background: #0f172a;
+}
+
+.project-image-wrapper img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   transition: transform 0.5s ease;
 }
 
-.work .box-container .box:hover img {
-  transform: scale(1.1);
+.work .box-container .box:hover .project-image-wrapper img {
+  transform: scale(1.05);
 }
 
 /* Highlight style for flagship project */
-.work .box-container .box.featured-project {
-  border: 3px solid #fbbf24;
+.work .box-container .box.flagship-project {
+  border: 2px solid var(--primary-color);
+  box-shadow: 0 15px 35px var(--primary-glow);
 }
 
-.work .box-container .box.featured-project::before {
-  content: 'FLAGSHIP PROJECT';
+.featured-ribbon {
   position: absolute;
-  top: 15px;
-  right: 15px;
-  background: #fbbf24;
-  color: #000;
-  padding: 0.4rem 1rem;
-  font-size: 1rem;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  color: #fff;
+  padding: 0.6rem 1.4rem;
+  border-radius: 50px;
+  font-size: 1.1rem;
   font-weight: 800;
-  border-radius: 4px;
   z-index: 10;
-  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 4px 10px rgba(217, 119, 6, 0.3);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+@media (min-width: 992px) {
+  .work .box-container > .box.flagship-project {
+    grid-column: span 2;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    min-height: 420px;
+  }
+  .work .box-container > .box.flagship-project .project-image-wrapper {
+    width: 45%;
+    border-bottom: none;
+    border-right: 1px solid var(--border-color);
+    aspect-ratio: auto;
+  }
+  .work .box-container > .box.flagship-project .content {
+    width: 55%;
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 
 .work .box-container .box .content {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  top: 82%;
-  left: 0;
-  background: var(--work-card-content-bg);
   display: flex;
   flex-direction: column;
-  transition: top 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  flex-grow: 1;
+  position: relative;
+  background: transparent;
+  height: auto;
+  width: 100%;
 }
 
-.work .box-container .box:hover .content {
-  top: 0;
-}
-
-.work .box-container .box .content .tag {
+.project-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 18%;
-  min-height: 5rem;
-  width: 100%;
-  padding: 0 2rem;
-  background: var(--work-tag-bg);
-  color: var(--work-tag-text);
+  padding: 2.2rem 2rem 1.2rem 2rem;
+  background: transparent;
+  gap: 1.5rem;
 }
 
-.work .box-container .box .content .tag h3 {
-  font-size: 1.8rem;
+.project-header h3 {
+  font-size: 2rem;
   font-weight: 700;
+  color: var(--heading-color);
+  margin: 0;
+}
+
+.status-badge {
+  font-size: 1.05rem;
+  font-weight: 700;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  background: var(--secondary-bg);
+  color: var(--text-light);
+  border: 1px solid var(--border-color);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  flex-shrink: 0;
+}
+
+.status-badge.status-ready {
+  background: rgba(16, 185, 129, 0.08);
+  color: #10b981;
+  border-color: rgba(16, 185, 129, 0.2);
+}
+
+.status-badge.status-internship {
+  background: rgba(99, 102, 241, 0.08);
+  color: var(--primary-color);
+  border-color: rgba(99, 102, 241, 0.2);
 }
 
 .work .desc {
-  padding: 2.5rem;
+  padding: 0 2rem 2rem 2rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   flex-grow: 1;
-  color: var(--work-card-text);
-  overflow-y: auto;
+  color: var(--text-color);
+  overflow-y: visible;
 }
 
 .work .desc p {
-  font-size: 1.4rem;
+  font-size: 1.35rem;
   line-height: 1.5;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-light);
   text-transform: none;
+  font-family: "Nunito", sans-serif;
+}
+
+.project-highlights {
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.project-highlights h4 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--heading-color);
+  margin-bottom: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.project-highlights ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.project-highlights ul li {
+  font-size: 1.2rem;
+  color: var(--text-color);
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  line-height: 1.4;
+  text-transform: none !important;
+}
+
+.project-highlights ul li i {
+  color: #10b981;
+  font-size: 1.1rem;
+  margin-top: 0.2rem;
+  flex-shrink: 0;
 }
 
 .work .desc .btns {
   display: flex;
   gap: 1.5rem;
+  margin-top: auto;
 }
 
 .work .desc .btns .btn {
   flex: 1;
   padding: 1.2rem;
-  border-radius: 6px;
+  border-radius: 8px;
   font-size: 1.4rem;
   font-weight: 700;
-  color: #fff;
-  background: var(--work-btn-bg);
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.8rem;
-  transition: background 0.3s;
+  transition: all 0.2s ease;
+  font-family: "Poppins", sans-serif;
 }
 
-.work .desc .btns .btn:hover {
-  background: var(--work-btn-hover);
+/* Primary and secondary button designs */
+.work .desc .btns .btn.view-btn {
+  background: var(--primary-color);
+  color: #fff;
+  border: 1px solid var(--primary-color);
+  box-shadow: 0 4px 10px var(--primary-glow);
+}
+
+.work .desc .btns .btn.view-btn:hover {
+  background: var(--primary-hover);
+  border-color: var(--primary-hover);
+  transform: translateY(-2px);
+}
+
+.work .desc .btns .btn.code-btn {
+  background: transparent;
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+}
+
+.work .desc .btns .btn.code-btn:hover {
+  background: var(--secondary-bg);
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+  transform: translateY(-2px);
+}
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 2rem;
+  margin-top: auto;
+}
+
+.project-tech span {
+  font-size: 1.1rem;
+  font-weight: 600;
+  background: var(--secondary-bg);
+  color: var(--primary-color);
+  padding: 0.3rem 0.8rem;
+  border-radius: 4px;
+  border: 1px solid var(--border-color);
+  transition: all 0.2s ease;
+}
+
+.project-tech span:hover {
+  border-color: var(--primary-color);
+  background: var(--primary-glow);
 }
 
 .work .viewall {
@@ -245,17 +404,19 @@
   gap: 1rem;
   padding: 1.5rem 3.5rem;
   border-radius: 8px;
-  color: #fff;
-  border: 2px solid var(--work-viewall-border, #fff);
+  color: var(--text-color);
+  border: 2px solid var(--border-color);
   font-weight: 700;
   font-size: 1.6rem;
   background: transparent;
-  transition: background 0.3s, color 0.3s;
+  transition: all 0.3s ease;
 }
 
 .work .viewall .btn:hover {
-  background: var(--work-viewall-hover-bg, #fff);
-  color: var(--work-viewall-hover-text, #000);
+  background: var(--primary-color);
+  color: #fff;
+  border-color: var(--primary-color);
+  box-shadow: 0 4px 15px var(--primary-glow);
 }
 
 .work .viewall .btn i {

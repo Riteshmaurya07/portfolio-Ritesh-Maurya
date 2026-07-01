@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#030712" />
+  <meta name="description" content="Read the technical case study detailing architecture, decisions, and outcomes." />
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="./style.css">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <!-- Favicon -->
+  <link id="favicon" rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-png">
+  <title>Case Study | Ritesh Maurya</title>
+
+  <style>
+    /* Premium Case Study Layout Styles */
+    .case-study-hero {
+      padding: 12rem 10% 6rem 10%;
+      background: var(--secondary-bg);
+      border-bottom: 1px solid var(--border-color);
+      text-align: left;
+      position: relative;
+    }
+    .case-study-hero .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.8rem;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--primary-color);
+      margin-bottom: 2rem;
+      transition: color 0.2s;
+    }
+    .case-study-hero .back-link:hover {
+      color: var(--primary-hover);
+    }
+    .case-study-hero h1 {
+      font-size: 4rem;
+      font-weight: 800;
+      color: var(--heading-color);
+      margin-bottom: 1.5rem;
+      line-height: 1.2;
+    }
+    .case-study-hero .tagline {
+      font-size: 1.8rem;
+      color: var(--text-light);
+      max-width: 800px;
+      line-height: 1.6;
+    }
+
+    .case-study-container {
+      max-width: 1200px;
+      margin: 4rem auto;
+      padding: 0 3%;
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    /* Sticky Sidebar Navigation */
+    .case-study-sidebar {
+      position: sticky;
+      top: 10rem;
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 2.5rem;
+      box-shadow: 0 4px 15px var(--shadow-light);
+    }
+    .case-study-sidebar h3 {
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--heading-color);
+      margin-bottom: 1.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 1rem;
+    }
+    .case-study-sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+    .case-study-sidebar ul li a {
+      font-size: 1.35rem;
+      color: var(--text-light);
+      font-weight: 600;
+      transition: all 0.2s;
+      display: block;
+    }
+    .case-study-sidebar ul li a.active, .case-study-sidebar ul li a:hover {
+      color: var(--primary-color);
+      transform: translateX(4px);
+    }
+
+    /* Content Area Styles */
+    .case-study-content {
+      background: transparent;
+    }
+    .case-study-section {
+      margin-bottom: 6rem;
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 4rem;
+      box-shadow: 0 4px 15px var(--shadow-light);
+      text-align: left;
+    }
+    .case-study-section h2 {
+      font-size: 2.4rem;
+      font-weight: 800;
+      color: var(--heading-color);
+      margin-bottom: 2rem;
+      border-left: 5px solid var(--primary-color);
+      padding-left: 1.5rem;
+      line-height: 1.2;
+    }
+    .case-study-section p {
+      font-size: 1.45rem;
+      color: var(--text-color);
+      line-height: 1.7;
+      margin-bottom: 2rem;
+      text-transform: none !important;
+      font-family: "Nunito", sans-serif;
+    }
+
+    /* Key-Value Lists */
+    .overview-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+    .overview-item {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .overview-label {
+      font-size: 1.2rem;
+      color: var(--text-light);
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+    .overview-value {
+      font-size: 1.45rem;
+      color: var(--heading-color);
+      font-weight: 700;
+    }
+
+    /* Links Row */
+    .links-row {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      margin-top: 3rem;
+      border-top: 1px solid var(--border-color);
+      padding-top: 2.5rem;
+    }
+    .links-row .btn {
+      padding: 1.2rem 2.5rem;
+      font-size: 1.4rem;
+      font-weight: 700;
+      border-radius: 8px;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+    .links-row .btn.primary {
+      background: var(--primary-color);
+      color: #fff;
+      box-shadow: 0 4px 10px var(--primary-glow);
+    }
+    .links-row .btn.primary:hover {
+      background: var(--primary-hover);
+    }
+    .links-row .btn.secondary {
+      border: 1px solid var(--border-color);
+      color: var(--text-color);
+      background: transparent;
+    }
+    .links-row .btn.secondary:hover {
+      background: var(--secondary-bg);
+      border-color: var(--primary-color);
+      color: var(--primary-color);
+    }
+
+    /* Cards layouts for features, decisions, and challenges */
+    .detail-cards-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .detail-card {
+      background: var(--secondary-bg);
+      border: 1px solid var(--border-color);
+      padding: 2.5rem;
+      border-radius: 12px;
+      text-align: left;
+    }
+    .detail-card h3 {
+      font-size: 1.7rem;
+      font-weight: 800;
+      color: var(--heading-color);
+      margin-bottom: 1rem;
+    }
+    .detail-card h4 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--primary-color);
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+      margin-top: 1.5rem;
+    }
+    .detail-card ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+    .detail-card ul li {
+      font-size: 1.35rem;
+      color: var(--text-color);
+      display: flex;
+      align-items: flex-start;
+      gap: 0.8rem;
+      line-height: 1.5;
+      text-transform: none !important;
+      font-family: "Nunito", sans-serif;
+    }
+    .detail-card ul li i {
+      color: #10b981;
+      font-size: 1.2rem;
+      margin-top: 0.3rem;
+      flex-shrink: 0;
+    }
+
+    .list-checklist {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+    .list-checklist li {
+      font-size: 1.45rem;
+      color: var(--text-color);
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      line-height: 1.6;
+      text-transform: none !important;
+      font-family: "Nunito", sans-serif;
+    }
+    .list-checklist li i {
+      color: var(--primary-color);
+      font-size: 1.3rem;
+      margin-top: 0.4rem;
+      flex-shrink: 0;
+    }
+
+    /* Badges list */
+    .badges-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      margin-top: 1rem;
+    }
+    .badges-list span {
+      font-size: 1.2rem;
+      font-weight: 700;
+      background: var(--secondary-bg);
+      color: var(--primary-color);
+      padding: 0.4rem 1.2rem;
+      border-radius: 6px;
+      border: 1px solid var(--border-color);
+    }
+
+    @media (max-width: 991px) {
+      .case-study-container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+      .case-study-sidebar {
+        display: none; /* Hide TOC on mobile templates */
+      }
+      .case-study-section {
+        padding: 3rem 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header starts -->
+  <header>
+    <a href="/" class="logo"><i class="far fa-registered"></i> Ritesh</a>
+    <div class="header-actions">
+      <div id="menu" class="fas fa-bars"></div>
+    </div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="/#home">Home</a></li>
+        <li><a href="/#about">About</a></li>
+        <li><a href="/#skills">Skills</a></li>
+        <li><a href="/#experience">Experience</a></li>
+        <li><a href="/#work">Projects</a></li>
+        <li><a href="/#contact">Contact</a></li>
+        <li>
+          <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Theme">
+            <i class="fas fa-moon"></i>
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <!-- Header ends -->
+
+  <!-- Hero Section -->
+  <section class="case-study-hero" id="hero-area">
+    <div class="hero-content">
+      <a href="/#work" class="back-link"><i class="fas fa-arrow-left"></i> Back to Projects</a>
+      <h1 id="project-title">Project Name</h1>
+      <p class="tagline" id="project-tagline">Dynamic Tagline describing the engineering purpose</p>
+    </div>
+  </section>
+
+  <!-- Layout Grid Container -->
+  <div class="case-study-container">
+    
+    <!-- Left Sidebar: Table of Contents -->
+    <aside class="case-study-sidebar">
+      <h3>Case Study</h3>
+      <ul>
+        <li><a href="#overview" class="active">1. Overview</a></li>
+        <li><a href="#problem">2. Problem Statement</a></li>
+        <li><a href="#goals">3. Goals</a></li>
+        <li><a href="#architecture">4. System Architecture</a></li>
+        <li><a href="#features">5. Features List</a></li>
+        <li><a href="#challenges">6. Tech Challenges</a></li>
+        <li><a href="#decisions">7. Design Decisions</a></li>
+        <li><a href="#lessons">8. Lessons Learned</a></li>
+        <li><a href="#results">9. Key Results</a></li>
+      </ul>
+    </aside>
+
+    <!-- Right Content Area -->
+    <main class="case-study-content">
+      
+      <!-- 1. Overview -->
+      <section class="case-study-section" id="overview">
+        <h2>Overview</h2>
+        <div class="overview-grid" id="overview-details">
+          <!-- Populated dynamically via JS -->
+        </div>
+        <div class="overview-label">Core Tech Stack:</div>
+        <div class="badges-list" id="overview-tech">
+          <!-- Populated dynamically via JS -->
+        </div>
+        <div class="links-row">
+          <a href="#" target="_blank" class="btn primary" id="live-btn-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+          <a href="#" target="_blank" class="btn secondary" id="code-btn-link"><i class="fab fa-github"></i> GitHub Repository</a>
+        </div>
+      </section>
+
+      <!-- 2. Problem Statement -->
+      <section class="case-study-section" id="problem">
+        <h2>Problem Statement</h2>
+        <p id="problem-text">Loading problem statement...</p>
+      </section>
+
+      <!-- 3. Goals -->
+      <section class="case-study-section" id="goals">
+        <h2>Project Objectives &amp; Goals</h2>
+        <ul class="list-checklist" id="goals-list">
+          <!-- Populated dynamically via JS -->
+        </ul>
+      </section>
+
+      <!-- 4. System Architecture -->
+      <section class="case-study-section" id="architecture">
+        <h2>System Architecture</h2>
+        <div class="detail-cards-grid" id="architecture-details">
+          <!-- Populated dynamically via JS -->
+        </div>
+      </section>
+
+      <!-- 5. Features -->
+      <section class="case-study-section" id="features">
+        <h2>Core Features &amp; Modules</h2>
+        <div class="detail-cards-grid" id="features-details">
+          <!-- Populated dynamically via JS -->
+        </div>
+      </section>
+
+      <!-- 6. Technical Challenges -->
+      <section class="case-study-section" id="challenges">
+        <h2>Technical Challenges &amp; Edge Cases</h2>
+        <div class="detail-cards-grid" id="challenges-details">
+          <!-- Populated dynamically via JS -->
+        </div>
+      </section>
+
+      <!-- 7. Engineering Decisions -->
+      <section class="case-study-section" id="decisions">
+        <h2>Engineering Decisions</h2>
+        <div class="detail-cards-grid" id="decisions-details">
+          <!-- Populated dynamically via JS -->
+        </div>
+      </section>
+
+      <!-- 8. Lessons Learned -->
+      <section class="case-study-section" id="lessons">
+        <h2>Lessons Learned &amp; Growth</h2>
+        <ul class="list-checklist" id="lessons-list">
+          <!-- Populated dynamically via JS -->
+        </ul>
+      </section>
+
+      <!-- 9. Results -->
+      <section class="case-study-section" id="results">
+        <h2>Results &amp; Impact Outcomes</h2>
+        <ul class="list-checklist" id="results-list">
+          <!-- Populated dynamically via JS -->
+        </ul>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- Modern Footer -->
+  <footer class="modern-footer">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <a href="#hero-area"><i class="far fa-registered"></i> Ritesh Maurya</a>
+      </div>
+      <p class="footer-tagline">Building robust, scalable applications and intelligent user experiences.</p>
+      <div class="footer-divider"></div>
+      <div class="footer-bottom">
+        <p class="copyright">&copy; 2026 | Designed &amp; Developed by Ritesh Maurya</p>
+        <p class="tech-stack-info">Built with React + Vite</p>
+        <a href="#hero-area" class="back-to-top-link"><i class="fas fa-chevron-up"></i> Back to Top</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- jQuery & Scroll Logic -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="./case-study.js"></script>
+  <script src="../assets/js/command-palette.js"></script>
+
+</body>
+</html>
